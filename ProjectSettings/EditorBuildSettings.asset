@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/1.unity
+    guid: feba959755ae25a4f900d6ccd20e9606
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 29678011eeac25148a80a2d0ece78bd3
+  - enabled: 1
+    path: Assets/Scenes/ranking.unity
+    guid: d147965f8e33aa84abffb31dfd4312a2
+  - enabled: 1
+    path: Assets/Scenes/Register.unity
+    guid: 5829a2e56d0635e41b882090a711f875
+  - enabled: 1
+    path: Assets/Scenes/Perfil.unity
+    guid: 43fc695947eecc74484d79346c619fe0
+  - enabled: 1
+    path: Assets/Scenes/prueba3.unity
+    guid: 8f0a20ab5ce409948b3c47c9608d75e1
+  - enabled: 0
+    path: Assets/Scenes/escenariofinal.unity
+    guid: 2156868f7342f1342a1267cb2e4635e5
+  - enabled: 1
+    path: Assets/Scenes/changePass.unity
+    guid: d6ff7688f0333d5419ba3315f061a8e2
+  - enabled: 1
+    path: Assets/Scenes/InsertEmail.unity
+    guid: bd9328728844c624dae809cc57f1ee3d
+  - enabled: 1
+    path: Assets/Scenes/Inventory.unity
+    guid: 6cc554865fd18da428206924b9c857c9
+  - enabled: 1
+    path: Assets/Scenes/Login.unity
+    guid: aeac54556d3f190458b3616deaebdf15

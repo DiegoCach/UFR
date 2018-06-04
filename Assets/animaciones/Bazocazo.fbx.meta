@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: b3c8e14973423f342a23cb5e7cf8c0e9
+timeCreated: 1520449276
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: arma_metralleta:ametralladora
+    100002: arma_metralleta:mango_arma
+    100004: back1
+    100006: //RootNode
+    100008: BicepsIzquierda4
+    100010: cadera
+    100012: ciclo_de_caminar:BicepsIzquierda1
+    100014: ciclo_de_caminar:Cabeza
+    100016: ciclo_de_caminar:CilindroColumna
+    100018: ciclo_de_caminar:CilindroHombroIzquierda005
+    100020: ciclo_de_caminar:CilindroHombroIzquierda4
+    100022: ciclo_de_caminar:CilindroPelvis
+    100024: ciclo_de_caminar:clavicula_izquierda1
+    100026: ciclo_de_caminar:CodoIzquierda1
+    100028: ciclo_de_caminar:control_ik
+    100030: ciclo_de_caminar:CRTL_PIE_IK_IZQUIERDO
+    100032: ciclo_de_caminar:CRTL_PIE_IK_IZQUIERDO 1
+    100034: ciclo_de_caminar:CRTL_RODILLA_IK_DERECHA
+    100036: ciclo_de_caminar:CRTL_RODILLA_IK_DERECHA 1
+    100038: ciclo_de_caminar:CRTL_TOBILLO_IK_DERECHO
+    100040: ciclo_de_caminar:CRTL_TOBILLO_IK_IZQUIERDO
+    100042: ciclo_de_caminar:CuboRodillaIzquierda2
+    100044: ciclo_de_caminar:CuboRodillaIzquierda4
+    100046: ciclo_de_caminar:Cuello
+    100048: ciclo_de_caminar:Dedo1Izquierda2
+    100050: ciclo_de_caminar:Dedo1Izquierda4
+    100052: ciclo_de_caminar:Dedo2Izquierda2
+    100054: ciclo_de_caminar:Dedo2Izquierda4
+    100056: ciclo_de_caminar:Dedo3Izquierda2
+    100058: ciclo_de_caminar:Dedo3Izquierda4
+    100060: ciclo_de_caminar:EspinillaIzquierda2
+    100062: ciclo_de_caminar:EspinillaIzquierda4
+    100064: ciclo_de_caminar:FK_IK_PIERNA_IZQUIERDA
+    100066: ciclo_de_caminar:FKIK_leg_L_CTRL
+    100068: ciclo_de_caminar:FKIK_leg_L_CTRL 1
+    100070: ciclo_de_caminar:GEOMETRIA
+    100072: ciclo_de_caminar:HombroIzquierda2
+    100074: ciclo_de_caminar:ikHandle7
+    100076: ciclo_de_caminar:ikHandle8
+    100078: ciclo_de_caminar:ikHandle9
+    100080: ciclo_de_caminar:manoIzquierda2
+    100082: ciclo_de_caminar:MusloIzquierda2
+    100084: ciclo_de_caminar:MusloIzquierda4
+    100086: ciclo_de_caminar:Nudillo1manoIzquierda4
+    100088: ciclo_de_caminar:Nudillo2manoIzquierda2
+    100090: ciclo_de_caminar:Nudillo2manoIzquierda4
+    100092: ciclo_de_caminar:Nudillo3mano
+    100094: ciclo_de_caminar:Nudillo3mano Izquierda2
+    100096: ciclo_de_caminar:nurbsCircle1
+    100098: ciclo_de_caminar:nurbsCircle16
+    100100: ciclo_de_caminar:nurbsCircle2
+    100102: ciclo_de_caminar:PartedelbrazoIzquierdo1
+    100104: ciclo_de_caminar:Pecho
+    100106: ciclo_de_caminar:PlantaPieDerecha
+    100108: ciclo_de_caminar:PlantaPieIzquierda2
+    100110: ciclo_de_caminar:PuntaPieIzquierda4
+    100112: ciclo_de_caminar:RobotUVs:PuntaPieIzquierda2
+    100114: ciclo_de_caminar:Rodilla1Izquierda2
+    100116: ciclo_de_caminar:Rodilla1Izquierda4
+    100118: ciclo_de_caminar:Rodilla2Izquierda2
+    100120: ciclo_de_caminar:Rodilla2Izquierda4
+    100122: ciclo_de_caminar:rodilla_IK_IZQUERDA
+    100124: ciclo_de_caminar:rodilla_IK_IZQUERDA 1
+    100126: ciclo_de_caminar:RodillaParteIzquierda2
+    100128: ciclo_de_caminar:RodillaParteIzquierda4
+    100130: ciclo_de_caminar:RotulaPelvisIzquierda2
+    100132: ciclo_de_caminar:RotulaPelvisIzquierda4
+    100134: ciclo_de_caminar:Tornillo1IzquierdaHombro2
+    100136: ciclo_de_caminar:Tornillo2IzquierdaHombro2
+    100138: ciclo_de_caminar:Tornillo2IzquierdaHombro2 1
+    100140: ciclo_de_caminar:Tornillo2IzquierdaHombro4
+    100142: ciclo_de_caminar:TornilloHombro2
+    100144: ciclo_de_caminar:TornilloRodillaIzquierda003
+    100146: ciclo_de_caminar:TornilloRodillaIzquierda005
+    100148: ciclo_de_caminar:TornilloRodillaIzquierda2
+    100150: ciclo_de_caminar:TornilloRodillaIzquierda4
+    100152: CilindroHombroIzquierda007
+    100154: CilindroHombroIzquierda6
+    100156: clavicula_izquierda3
+    100158: CODO_DER
+    100160: CODO_DER 1
+    100162: CODO_IZQD
+    100164: CODO_IZQD 1
+    100166: CodoIzquierda4
+    100168: CRTL_CLAVICULA_DER
+    100170: CRTL_CLAVICULA_DER 1
+    100172: CRTL_CLAVICULA_IZQD
+    100174: CRTL_CLAVICULA_IZQD 1
+    100176: CTRL_MASTER
+    100178: CURVA_CABEZA
+    100180: CURVA_COLUMNA_BRAZOS
+    100182: CURVA_DEDOS_PIE_DER
+    100184: CURVA_DEDOS_PIE_IZQ
+    100186: CURVA_MUSLO_DER
+    100188: CURVA_MUSLO_IZQ
+    100190: CURVA_RODILLA_DER
+    100192: CURVA_RODILLA_IZQ
+    100194: CURVA_TOBILLO_DER
+    100196: CURVA_TOBILLO_IZQ
+    100198: CURVA_TRONCOSUPERIOR
+    100200: FALANGUE_1_DER
+    100202: FALANGUE_1_DER 1
+    100204: FALANGUE_1_IZQD
+    100206: FALANGUE_1_IZQD 1
+    100208: FALANGUE_2_DER
+    100210: FALANGUE_2_DER 1
+    100212: FALANGUE_2_IZQD
+    100214: FALANGUE_2_IZQD 1
+    100216: FALANGUE_3_DER
+    100218: FALANGUE_3_DER 1
+    100220: FALANGUE_3_IZQD
+    100222: FALANGUE_3_IZQD 1
+    100224: FK_CABEZA
+    100226: FK_COLUMNA
+    100228: FK_CONTROL
+    100230: FK_DEDOS_IZQ
+    100232: FK_DEDOS_PIE_DER
+    100234: FK_HUESOS_BRAZO_DER
+    100236: FK_HUESOS_BRAZO_IZQ
+    100238: FK_HUESOS_PIERNA_IZQ_
+    100240: FK_PIERNA_DER
+    100242: FK_PIERNA_IZQ
+    100244: FK_RODILLA_DER
+    100246: FK_RODILLA_IZ
+    100248: FK_ROOT
+    100250: FK_TOBILLO_DER
+    100252: FK_TOBILLO_IZQ
+    100254: FK_TRONCOSUPERIOR
+    100256: group5
+    100258: group6
+    100260: HOMBRO_
+    100262: HOMBRO_DER
+    100264: HOMBRO_IDER
+    100266: HOMBRO_IZQD
+    100268: HombroIzquierda4
+    100270: HUESO_CABEZA
+    100272: HUESO_CADERA_COLUMNA
+    100274: HUESO_CLAVICULA_DRCH
+    100276: HUESO_CLAVICULA_IZQ
+    100278: HUESO_CODO_DER
+    100280: HUESO_CODO_IZQ
+    100282: HUESO_COLUMNA_FINAL
+    100284: HUESO_COLUMNA_MEDIO
+    100286: HUESO_CUELLO
+    100288: HUESO_DEDOINDICE_DER
+    100290: HUESO_DEDOINDICE_IZQ
+    100292: HUESO_DEDOMEDIO_DER
+    100294: HUESO_DEDOMEDIO_IZQ
+    100296: HUESO_DEDOMENIQUE_DER
+    100298: HUESO_DEDOMENIQUE_IZQ
+    100300: HUESO_EMPEINE_DER
+    100302: HUESO_EMPEINE_IZQ
+    100304: HUESO_FIN_DEDOINDICE_DER
+    100306: HUESO_FIN_DEDOINDICE_IZQ
+    100308: HUESO_FIN_DEDOMEDIO_DER
+    100310: HUESO_FIN_DEDOMEDIO_IZQ
+    100312: HUESO_FIN_DEDOMENIQUE_DER
+    100314: HUESO_FIN_DEDOMENIQUE_IZQ
+    100316: HUESO_FINAL_PIE_DER
+    100318: HUESO_FINAL_PIE_IZQ
+    100320: HUESO_FINCABEZA
+    100322: HUESO_HOMBRO_DER
+    100324: HUESO_HOMBRO_IZQ
+    100326: HUESO_MANO_DER
+    100328: HUESO_MANO_IZQ
+    100330: HUESO_MUNECA_DER
+    100332: HUESO_MUNECA_IZQ
+    100334: HUESO_MUSLO_DER
+    100336: HUESO_MUSLO_IZQ
+    100338: HUESO_NUDILLO_DEDOINDICE_DER
+    100340: HUESO_NUDILLO_DEDOINDICE_IZQ
+    100342: HUESO_NUDILLO_DEDOMEDIO_DER
+    100344: HUESO_NUDILLO_DEDOMEDIO_IZQ
+    100346: HUESO_NUDILLO_DEDOMENIQUE_DER
+    100348: HUESO_NUDILLO_DEDOMENIQUE_IZQ
+    100350: HUESO_OJOS
+    100352: HUESO_RODILLA_DER
+    100354: HUESO_RODILLA_IZQ
+    100356: HUESO_TOBILLO_DER
+    100358: HUESO_TOBILLO_IZQ
+    100360: HUESOS_PIERNA_DERECHA
+    100362: ikHandle10
+    100364: ikHandle11
+    100366: ikHandle12
+    100368: "MU\xD1ECA_DER"
+    100370: "MU\xD1ECA_IDER"
+    100372: "MU\xD1ECA_IZQD"
+    100374: "MU\xD1ECA_IZQD 1"
+    100376: NUDILLO_1_DER
+    100378: NUDILLO_1_DER 1
+    100380: NUDILLO_1_IZQD
+    100382: NUDILLO_1_IZQD 1
+    100384: NUDILLO_2_DER
+    100386: NUDILLO_2_DER 1
+    100388: NUDILLO_2_IZQD
+    100390: NUDILLO_2_IZQD 1
+    100392: nudillo_3_DER
+    100394: nudillo_3_DER 1
+    100396: nudillo_3_izqd
+    100398: nudillo_3_izqd 1
+    100400: nurbsCircle2
+    100402: PartedelbrazoIzquierdo4
+    100404: polySurface1
+    100406: polySurface10
+    100408: polySurface2
+    100410: polySurface3
+    100412: polySurface4
+    100414: polySurface5
+    100416: polySurface6
+    100418: polySurface7
+    100420: polySurface8
+    100422: polySurface9
+    100424: ROOT
+    100426: Tornillo1IzquierdaHombro4
+    100428: TornilloHombro4
+    100430: transform1
+    400000: arma_metralleta:ametralladora
+    400002: arma_metralleta:mango_arma
+    400004: back1
+    400006: //RootNode
+    400008: BicepsIzquierda4
+    400010: cadera
+    400012: ciclo_de_caminar:BicepsIzquierda1
+    400014: ciclo_de_caminar:Cabeza
+    400016: ciclo_de_caminar:CilindroColumna
+    400018: ciclo_de_caminar:CilindroHombroIzquierda005
+    400020: ciclo_de_caminar:CilindroHombroIzquierda4
+    400022: ciclo_de_caminar:CilindroPelvis
+    400024: ciclo_de_caminar:clavicula_izquierda1
+    400026: ciclo_de_caminar:CodoIzquierda1
+    400028: ciclo_de_caminar:control_ik
+    400030: ciclo_de_caminar:CRTL_PIE_IK_IZQUIERDO
+    400032: ciclo_de_caminar:CRTL_PIE_IK_IZQUIERDO 1
+    400034: ciclo_de_caminar:CRTL_RODILLA_IK_DERECHA
+    400036: ciclo_de_caminar:CRTL_RODILLA_IK_DERECHA 1
+    400038: ciclo_de_caminar:CRTL_TOBILLO_IK_DERECHO
+    400040: ciclo_de_caminar:CRTL_TOBILLO_IK_IZQUIERDO
+    400042: ciclo_de_caminar:CuboRodillaIzquierda2
+    400044: ciclo_de_caminar:CuboRodillaIzquierda4
+    400046: ciclo_de_caminar:Cuello
+    400048: ciclo_de_caminar:Dedo1Izquierda2
+    400050: ciclo_de_caminar:Dedo1Izquierda4
+    400052: ciclo_de_caminar:Dedo2Izquierda2
+    400054: ciclo_de_caminar:Dedo2Izquierda4
+    400056: ciclo_de_caminar:Dedo3Izquierda2
+    400058: ciclo_de_caminar:Dedo3Izquierda4
+    400060: ciclo_de_caminar:EspinillaIzquierda2
+    400062: ciclo_de_caminar:EspinillaIzquierda4
+    400064: ciclo_de_caminar:FK_IK_PIERNA_IZQUIERDA
+    400066: ciclo_de_caminar:FKIK_leg_L_CTRL
+    400068: ciclo_de_caminar:FKIK_leg_L_CTRL 1
+    400070: ciclo_de_caminar:GEOMETRIA
+    400072: ciclo_de_caminar:HombroIzquierda2
+    400074: ciclo_de_caminar:ikHandle7
+    400076: ciclo_de_caminar:ikHandle8
+    400078: ciclo_de_caminar:ikHandle9
+    400080: ciclo_de_caminar:manoIzquierda2
+    400082: ciclo_de_caminar:MusloIzquierda2
+    400084: ciclo_de_caminar:MusloIzquierda4
+    400086: ciclo_de_caminar:Nudillo1manoIzquierda4
+    400088: ciclo_de_caminar:Nudillo2manoIzquierda2
+    400090: ciclo_de_caminar:Nudillo2manoIzquierda4
+    400092: ciclo_de_caminar:Nudillo3mano
+    400094: ciclo_de_caminar:Nudillo3mano Izquierda2
+    400096: ciclo_de_caminar:nurbsCircle1
+    400098: ciclo_de_caminar:nurbsCircle16
+    400100: ciclo_de_caminar:nurbsCircle2
+    400102: ciclo_de_caminar:PartedelbrazoIzquierdo1
+    400104: ciclo_de_caminar:Pecho
+    400106: ciclo_de_caminar:PlantaPieDerecha
+    400108: ciclo_de_caminar:PlantaPieIzquierda2
+    400110: ciclo_de_caminar:PuntaPieIzquierda4
+    400112: ciclo_de_caminar:RobotUVs:PuntaPieIzquierda2
+    400114: ciclo_de_caminar:Rodilla1Izquierda2
+    400116: ciclo_de_caminar:Rodilla1Izquierda4
+    400118: ciclo_de_caminar:Rodilla2Izquierda2
+    400120: ciclo_de_caminar:Rodilla2Izquierda4
+    400122: ciclo_de_caminar:rodilla_IK_IZQUERDA
+    400124: ciclo_de_caminar:rodilla_IK_IZQUERDA 1
+    400126: ciclo_de_caminar:RodillaParteIzquierda2
+    400128: ciclo_de_caminar:RodillaParteIzquierda4
+    400130: ciclo_de_caminar:RotulaPelvisIzquierda2
+    400132: ciclo_de_caminar:RotulaPelvisIzquierda4
+    400134: ciclo_de_caminar:Tornillo1IzquierdaHombro2
+    400136: ciclo_de_caminar:Tornillo2IzquierdaHombro2
+    400138: ciclo_de_caminar:Tornillo2IzquierdaHombro2 1
+    400140: ciclo_de_caminar:Tornillo2IzquierdaHombro4
+    400142: ciclo_de_caminar:TornilloHombro2
+    400144: ciclo_de_caminar:TornilloRodillaIzquierda003
+    400146: ciclo_de_caminar:TornilloRodillaIzquierda005
+    400148: ciclo_de_caminar:TornilloRodillaIzquierda2
+    400150: ciclo_de_caminar:TornilloRodillaIzquierda4
+    400152: CilindroHombroIzquierda007
+    400154: CilindroHombroIzquierda6
+    400156: clavicula_izquierda3
+    400158: CODO_DER
+    400160: CODO_DER 1
+    400162: CODO_IZQD
+    400164: CODO_IZQD 1
+    400166: CodoIzquierda4
+    400168: CRTL_CLAVICULA_DER
+    400170: CRTL_CLAVICULA_DER 1
+    400172: CRTL_CLAVICULA_IZQD
+    400174: CRTL_CLAVICULA_IZQD 1
+    400176: CTRL_MASTER
+    400178: CURVA_CABEZA
+    400180: CURVA_COLUMNA_BRAZOS
+    400182: CURVA_DEDOS_PIE_DER
+    400184: CURVA_DEDOS_PIE_IZQ
+    400186: CURVA_MUSLO_DER
+    400188: CURVA_MUSLO_IZQ
+    400190: CURVA_RODILLA_DER
+    400192: CURVA_RODILLA_IZQ
+    400194: CURVA_TOBILLO_DER
+    400196: CURVA_TOBILLO_IZQ
+    400198: CURVA_TRONCOSUPERIOR
+    400200: FALANGUE_1_DER
+    400202: FALANGUE_1_DER 1
+    400204: FALANGUE_1_IZQD
+    400206: FALANGUE_1_IZQD 1
+    400208: FALANGUE_2_DER
+    400210: FALANGUE_2_DER 1
+    400212: FALANGUE_2_IZQD
+    400214: FALANGUE_2_IZQD 1
+    400216: FALANGUE_3_DER
+    400218: FALANGUE_3_DER 1
+    400220: FALANGUE_3_IZQD
+    400222: FALANGUE_3_IZQD 1
+    400224: FK_CABEZA
+    400226: FK_COLUMNA
+    400228: FK_CONTROL
+    400230: FK_DEDOS_IZQ
+    400232: FK_DEDOS_PIE_DER
+    400234: FK_HUESOS_BRAZO_DER
+    400236: FK_HUESOS_BRAZO_IZQ
+    400238: FK_HUESOS_PIERNA_IZQ_
+    400240: FK_PIERNA_DER
+    400242: FK_PIERNA_IZQ
+    400244: FK_RODILLA_DER
+    400246: FK_RODILLA_IZ
+    400248: FK_ROOT
+    400250: FK_TOBILLO_DER
+    400252: FK_TOBILLO_IZQ
+    400254: FK_TRONCOSUPERIOR
+    400256: group5
+    400258: group6
+    400260: HOMBRO_
+    400262: HOMBRO_DER
+    400264: HOMBRO_IDER
+    400266: HOMBRO_IZQD
+    400268: HombroIzquierda4
+    400270: HUESO_CABEZA
+    400272: HUESO_CADERA_COLUMNA
+    400274: HUESO_CLAVICULA_DRCH
+    400276: HUESO_CLAVICULA_IZQ
+    400278: HUESO_CODO_DER
+    400280: HUESO_CODO_IZQ
+    400282: HUESO_COLUMNA_FINAL
+    400284: HUESO_COLUMNA_MEDIO
+    400286: HUESO_CUELLO
+    400288: HUESO_DEDOINDICE_DER
+    400290: HUESO_DEDOINDICE_IZQ
+    400292: HUESO_DEDOMEDIO_DER
+    400294: HUESO_DEDOMEDIO_IZQ
+    400296: HUESO_DEDOMENIQUE_DER
+    400298: HUESO_DEDOMENIQUE_IZQ
+    400300: HUESO_EMPEINE_DER
+    400302: HUESO_EMPEINE_IZQ
+    400304: HUESO_FIN_DEDOINDICE_DER
+    400306: HUESO_FIN_DEDOINDICE_IZQ
+    400308: HUESO_FIN_DEDOMEDIO_DER
+    400310: HUESO_FIN_DEDOMEDIO_IZQ
+    400312: HUESO_FIN_DEDOMENIQUE_DER
+    400314: HUESO_FIN_DEDOMENIQUE_IZQ
+    400316: HUESO_FINAL_PIE_DER
+    400318: HUESO_FINAL_PIE_IZQ
+    400320: HUESO_FINCABEZA
+    400322: HUESO_HOMBRO_DER
+    400324: HUESO_HOMBRO_IZQ
+    400326: HUESO_MANO_DER
+    400328: HUESO_MANO_IZQ
+    400330: HUESO_MUNECA_DER
+    400332: HUESO_MUNECA_IZQ
+    400334: HUESO_MUSLO_DER
+    400336: HUESO_MUSLO_IZQ
+    400338: HUESO_NUDILLO_DEDOINDICE_DER
+    400340: HUESO_NUDILLO_DEDOINDICE_IZQ
+    400342: HUESO_NUDILLO_DEDOMEDIO_DER
+    400344: HUESO_NUDILLO_DEDOMEDIO_IZQ
+    400346: HUESO_NUDILLO_DEDOMENIQUE_DER
+    400348: HUESO_NUDILLO_DEDOMENIQUE_IZQ
+    400350: HUESO_OJOS
+    400352: HUESO_RODILLA_DER
+    400354: HUESO_RODILLA_IZQ
+    400356: HUESO_TOBILLO_DER
+    400358: HUESO_TOBILLO_IZQ
+    400360: HUESOS_PIERNA_DERECHA
+    400362: ikHandle10
+    400364: ikHandle11
+    400366: ikHandle12
+    400368: "MU\xD1ECA_DER"
+    400370: "MU\xD1ECA_IDER"
+    400372: "MU\xD1ECA_IZQD"
+    400374: "MU\xD1ECA_IZQD 1"
+    400376: NUDILLO_1_DER
+    400378: NUDILLO_1_DER 1
+    400380: NUDILLO_1_IZQD
+    400382: NUDILLO_1_IZQD 1
+    400384: NUDILLO_2_DER
+    400386: NUDILLO_2_DER 1
+    400388: NUDILLO_2_IZQD
+    400390: NUDILLO_2_IZQD 1
+    400392: nudillo_3_DER
+    400394: nudillo_3_DER 1
+    400396: nudillo_3_izqd
+    400398: nudillo_3_izqd 1
+    400400: nurbsCircle2
+    400402: PartedelbrazoIzquierdo4
+    400404: polySurface1
+    400406: polySurface10
+    400408: polySurface2
+    400410: polySurface3
+    400412: polySurface4
+    400414: polySurface5
+    400416: polySurface6
+    400418: polySurface7
+    400420: polySurface8
+    400422: polySurface9
+    400424: ROOT
+    400426: Tornillo1IzquierdaHombro4
+    400428: TornilloHombro4
+    400430: transform1
+    2000000: back1
+    2300000: arma_metralleta:ametralladora
+    2300002: arma_metralleta:mango_arma
+    3300000: arma_metralleta:ametralladora
+    3300002: arma_metralleta:mango_arma
+    4300000: ciclo_de_caminar:TornilloRodillaIzquierda2
+    4300002: polySurface10
+    4300004: polySurface9
+    4300006: ciclo_de_caminar:Dedo1Izquierda2
+    4300008: ciclo_de_caminar:MusloIzquierda2
+    4300010: ciclo_de_caminar:Dedo2Izquierda2
+    4300012: ciclo_de_caminar:PlantaPieIzquierda2
+    4300014: ciclo_de_caminar:Rodilla1Izquierda2
+    4300016: ciclo_de_caminar:CuboRodillaIzquierda2
+    4300018: ciclo_de_caminar:PuntaPieIzquierda4
+    4300020: ciclo_de_caminar:RodillaParteIzquierda2
+    4300022: ciclo_de_caminar:CuboRodillaIzquierda4
+    4300024: ciclo_de_caminar:TornilloRodillaIzquierda4
+    4300026: ciclo_de_caminar:TornilloRodillaIzquierda003
+    4300028: ciclo_de_caminar:manoIzquierda2
+    4300030: ciclo_de_caminar:Nudillo2manoIzquierda2
+    4300032: ciclo_de_caminar:EspinillaIzquierda2
+    4300034: polySurface7
+    4300036: polySurface8
+    4300038: ciclo_de_caminar:Dedo3Izquierda2
+    4300040: ciclo_de_caminar:Nudillo3mano Izquierda2
+    4300042: ciclo_de_caminar:Rodilla2Izquierda2
+    4300044: ciclo_de_caminar:RotulaPelvisIzquierda2
+    4300046: ciclo_de_caminar:RobotUVs:PuntaPieIzquierda2
+    4300048: ciclo_de_caminar:CilindroPelvis
+    4300050: ciclo_de_caminar:CilindroColumna
+    4300052: ciclo_de_caminar:Cabeza
+    4300054: ciclo_de_caminar:Cuello
+    4300056: ciclo_de_caminar:PlantaPieDerecha
+    4300058: polySurface6
+    4300060: polySurface5
+    4300062: ciclo_de_caminar:MusloIzquierda4
+    4300064: ciclo_de_caminar:RodillaParteIzquierda4
+    4300066: ciclo_de_caminar:Dedo1Izquierda4
+    4300068: ciclo_de_caminar:Nudillo1manoIzquierda4
+    4300070: ciclo_de_caminar:TornilloRodillaIzquierda005
+    4300072: ciclo_de_caminar:Dedo2Izquierda4
+    4300074: ciclo_de_caminar:Rodilla1Izquierda4
+    4300076: ciclo_de_caminar:RotulaPelvisIzquierda4
+    4300078: ciclo_de_caminar:Nudillo2manoIzquierda4
+    4300080: ciclo_de_caminar:Dedo3Izquierda4
+    4300082: ciclo_de_caminar:Rodilla2Izquierda4
+    4300084: ciclo_de_caminar:Nudillo3mano
+    4300086: ciclo_de_caminar:EspinillaIzquierda4
+    4300088: ciclo_de_caminar:HombroIzquierda2
+    4300090: ciclo_de_caminar:Tornillo1IzquierdaHombro2
+    4300092: ciclo_de_caminar:TornilloHombro2
+    4300094: ciclo_de_caminar:Tornillo2IzquierdaHombro2
+    4300096: ciclo_de_caminar:clavicula_izquierda1
+    4300098: ciclo_de_caminar:CilindroHombroIzquierda4
+    4300100: ciclo_de_caminar:CilindroHombroIzquierda005
+    4300102: ciclo_de_caminar:PartedelbrazoIzquierdo1
+    4300104: ciclo_de_caminar:BicepsIzquierda1
+    4300106: polySurface2
+    4300108: polySurface1
+    4300110: ciclo_de_caminar:CodoIzquierda1
+    4300112: polySurface4
+    4300114: polySurface3
+    4300116: ciclo_de_caminar:Tornillo2IzquierdaHombro4
+    4300118: cadera
+    4300120: CilindroHombroIzquierda007
+    4300122: CilindroHombroIzquierda6
+    4300124: clavicula_izquierda3
+    4300126: HombroIzquierda4
+    4300128: TornilloHombro4
+    4300130: PartedelbrazoIzquierdo4
+    4300132: BicepsIzquierda4
+    4300134: CodoIzquierda4
+    4300136: Tornillo1IzquierdaHombro4
+    4300138: arma_metralleta:ametralladora
+    4300140: arma_metralleta:mango_arma
+    7400000: Bazoca
+    9500000: //RootNode
+    13700000: BicepsIzquierda4
+    13700002: cadera
+    13700004: ciclo_de_caminar:BicepsIzquierda1
+    13700006: ciclo_de_caminar:Cabeza
+    13700008: ciclo_de_caminar:CilindroColumna
+    13700010: ciclo_de_caminar:CilindroHombroIzquierda005
+    13700012: ciclo_de_caminar:CilindroHombroIzquierda4
+    13700014: ciclo_de_caminar:CilindroPelvis
+    13700016: ciclo_de_caminar:clavicula_izquierda1
+    13700018: ciclo_de_caminar:CodoIzquierda1
+    13700020: ciclo_de_caminar:CuboRodillaIzquierda2
+    13700022: ciclo_de_caminar:CuboRodillaIzquierda4
+    13700024: ciclo_de_caminar:Cuello
+    13700026: ciclo_de_caminar:Dedo1Izquierda2
+    13700028: ciclo_de_caminar:Dedo1Izquierda4
+    13700030: ciclo_de_caminar:Dedo2Izquierda2
+    13700032: ciclo_de_caminar:Dedo2Izquierda4
+    13700034: ciclo_de_caminar:Dedo3Izquierda2
+    13700036: ciclo_de_caminar:Dedo3Izquierda4
+    13700038: ciclo_de_caminar:EspinillaIzquierda2
+    13700040: ciclo_de_caminar:EspinillaIzquierda4
+    13700042: ciclo_de_caminar:HombroIzquierda2
+    13700044: ciclo_de_caminar:manoIzquierda2
+    13700046: ciclo_de_caminar:MusloIzquierda2
+    13700048: ciclo_de_caminar:MusloIzquierda4
+    13700050: ciclo_de_caminar:Nudillo1manoIzquierda4
+    13700052: ciclo_de_caminar:Nudillo2manoIzquierda2
+    13700054: ciclo_de_caminar:Nudillo2manoIzquierda4
+    13700056: ciclo_de_caminar:Nudillo3mano
+    13700058: ciclo_de_caminar:Nudillo3mano Izquierda2
+    13700060: ciclo_de_caminar:PartedelbrazoIzquierdo1
+    13700062: ciclo_de_caminar:PlantaPieDerecha
+    13700064: ciclo_de_caminar:PlantaPieIzquierda2
+    13700066: ciclo_de_caminar:PuntaPieIzquierda4
+    13700068: ciclo_de_caminar:RobotUVs:PuntaPieIzquierda2
+    13700070: ciclo_de_caminar:Rodilla1Izquierda2
+    13700072: ciclo_de_caminar:Rodilla1Izquierda4
+    13700074: ciclo_de_caminar:Rodilla2Izquierda2
+    13700076: ciclo_de_caminar:Rodilla2Izquierda4
+    13700078: ciclo_de_caminar:RodillaParteIzquierda2
+    13700080: ciclo_de_caminar:RodillaParteIzquierda4
+    13700082: ciclo_de_caminar:RotulaPelvisIzquierda2
+    13700084: ciclo_de_caminar:RotulaPelvisIzquierda4
+    13700086: ciclo_de_caminar:Tornillo1IzquierdaHombro2
+    13700088: ciclo_de_caminar:Tornillo2IzquierdaHombro2 1
+    13700090: ciclo_de_caminar:Tornillo2IzquierdaHombro4
+    13700092: ciclo_de_caminar:TornilloHombro2
+    13700094: ciclo_de_caminar:TornilloRodillaIzquierda003
+    13700096: ciclo_de_caminar:TornilloRodillaIzquierda005
+    13700098: ciclo_de_caminar:TornilloRodillaIzquierda2
+    13700100: ciclo_de_caminar:TornilloRodillaIzquierda4
+    13700102: CilindroHombroIzquierda007
+    13700104: CilindroHombroIzquierda6
+    13700106: clavicula_izquierda3
+    13700108: CodoIzquierda4
+    13700110: HombroIzquierda4
+    13700112: PartedelbrazoIzquierdo4
+    13700114: polySurface1
+    13700116: polySurface10
+    13700118: polySurface2
+    13700120: polySurface3
+    13700122: polySurface4
+    13700124: polySurface5
+    13700126: polySurface6
+    13700128: polySurface7
+    13700130: polySurface8
+    13700132: polySurface9
+    13700134: Tornillo1IzquierdaHombro4
+    13700136: TornilloHombro4
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Bazoca
+      takeName: Bazoca
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

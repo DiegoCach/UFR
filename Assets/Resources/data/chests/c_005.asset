@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d166df06da38e4945b54bad119d399eb, type: 3}
+  m_Name: c_005
+  m_EditorClassIdentifier: 
+  rarity: 5
+  bodySide: 3
+  damage: 5
+  life: 5
+  speedMovement: 5
+  cadence: 5
+  description: alguna tiene que tener
+  skins:
+  - {fileID: 1321883746079336, guid: 66a8452d7473ff641873c9a535e76ae2, type: 2}
+  - {fileID: 1589503927762096, guid: b81c0bf6d96a2ab46a82d1d3957044d2, type: 2}
+  - {fileID: 1937408416301202, guid: 5c323c797035cc44c870c73ebc3e77bf, type: 2}
+  - {fileID: 1730994097593002, guid: d7b729c367641574aacef29badd837fc, type: 2}
+  inventoryIcon: {fileID: 0}

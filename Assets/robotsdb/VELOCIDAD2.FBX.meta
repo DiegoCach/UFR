@@ -1,0 +1,155 @@
+fileFormatVersion: 2
+guid: 63bdaffc3b42e7843a67013e84d97422
+timeCreated: 1526473426
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: CADERA
+    100002: CASCO
+    100004: CINTURA
+    100006: hombro
+    100008: HOMBRO_DER
+    100010: MUSLO_DER
+    100012: MUSLO_IZQ
+    100014: pechera
+    100016: pie_izquierdo
+    100018: PUNTA_DER
+    100020: TALON_DER
+    100022: talon_izquier
+    100024: TIBIA_DER
+    100026: TIBIA_IZQ
+    100028: //RootNode
+    400000: CADERA
+    400002: CASCO
+    400004: CINTURA
+    400006: hombro
+    400008: HOMBRO_DER
+    400010: MUSLO_DER
+    400012: MUSLO_IZQ
+    400014: pechera
+    400016: pie_izquierdo
+    400018: PUNTA_DER
+    400020: TALON_DER
+    400022: talon_izquier
+    400024: TIBIA_DER
+    400026: TIBIA_IZQ
+    400028: //RootNode
+    2300000: CADERA
+    2300002: CASCO
+    2300004: CINTURA
+    2300006: hombro
+    2300008: HOMBRO_DER
+    2300010: MUSLO_DER
+    2300012: MUSLO_IZQ
+    2300014: pechera
+    2300016: pie_izquierdo
+    2300018: PUNTA_DER
+    2300020: TALON_DER
+    2300022: talon_izquier
+    2300024: TIBIA_DER
+    2300026: TIBIA_IZQ
+    3300000: CADERA
+    3300002: CASCO
+    3300004: CINTURA
+    3300006: hombro
+    3300008: HOMBRO_DER
+    3300010: MUSLO_DER
+    3300012: MUSLO_IZQ
+    3300014: pechera
+    3300016: pie_izquierdo
+    3300018: PUNTA_DER
+    3300020: TALON_DER
+    3300022: talon_izquier
+    3300024: TIBIA_DER
+    3300026: TIBIA_IZQ
+    4300000: pechera
+    4300002: pie_izquierdo
+    4300004: talon_izquier
+    4300006: hombro
+    4300008: CASCO
+    4300010: CADERA
+    4300012: MUSLO_IZQ
+    4300014: TIBIA_IZQ
+    4300016: CINTURA
+    4300018: HOMBRO_DER
+    4300020: MUSLO_DER
+    4300022: TIBIA_DER
+    4300024: TALON_DER
+    4300026: PUNTA_DER
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

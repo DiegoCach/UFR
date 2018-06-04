@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d166df06da38e4945b54bad119d399eb, type: 3}
+  m_Name: ls_001
+  m_EditorClassIdentifier: 
+  rarity: 5
+  bodySide: 7
+  damage: 5
+  life: 4
+  speedMovement: 10
+  cadence: 3
+  description: alguna tiene que tener
+  skins:
+  - {fileID: 1067774474714158, guid: f36f8c28996ebbf4286d4d0bbbe099ad, type: 2}
+  - {fileID: 1177170826413396, guid: 61f253a2c1a93604ca18d352ee047ae5, type: 2}
+  - {fileID: 1798802906764112, guid: d799bc9756ba04b4c90c981c007bf391, type: 2}
+  - {fileID: 1874413559635038, guid: 65c1901d5014c0141948ea875a1cfde9, type: 2}
+  - {fileID: 1605099451289300, guid: e9b23428293e45947b1c15e48a18a365, type: 2}
+  - {fileID: 1352040314256804, guid: 82150e8dd53d9a248892d09d640e6bb4, type: 2}
+  - {fileID: 1151035736328154, guid: c8280891195f6e5408cf323554efd643, type: 2}
+  - {fileID: 1269214602301066, guid: 046828b17b61be04b8f5adc3dd5fdca5, type: 2}
+  - {fileID: 1777060931597256, guid: 0e114ae7a968e4d4f934181c253253f0, type: 2}
+  - {fileID: 1518023384851036, guid: 094669589df95954e8432f826cc0ba61, type: 2}
+  - {fileID: 1943567113391614, guid: 83201c24400c90344924c5a9eba69c13, type: 2}
+  inventoryIcon: {fileID: 21300000, guid: 936a5a6ff2a1ff4489b3e42e06c4a56d, type: 3}

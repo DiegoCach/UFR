@@ -1,0 +1,60 @@
+# Estructura de datos
+name,type,damage,life,speedMovement,cadence,description
+
+# Mi robot
+
+myRobot,robot, 0, 0, 0, 0,Alguna
+
+# Robots predefinidos
+
+Strength,robot, 15, 1, 3, 3,Es muy fuerte pero tiene poca vida
+Defense,robot, 3, 16, 2, 1,Tiene poca velocidad pero tiene mucha vida
+Agility,robot, 1, 2, 12, 7,Compensa su bajo daño con su gran velocidad
+
+# Base de atributos del robot
+
+StrengthBase,robotBase, 6, 1, 2, 1,Alguna
+DefenseBase,robotBase, 2, 6, 1, 1,Alguna
+AgilityBase,robotBase, 1, 2, 3, 4,Alguna
+
+# Brazos izquierdos del robot
+
+leftArmStrengthInStrength,arm, 4, 0, 0, 0,Alguna
+leftArmStrengthInDefense,arm, 3, 1, 0, 0,Alguna
+leftArmStrengthInAgility,arm, 3, 0, 1, 0,Alguna
+
+leftArmDefenseInStrength,arm, 0, 4, 0, 0,Alguna
+leftArmDefenseInDefense,arm, 0, 4, 0, 0,Alguna
+leftArmDefenseInAgility,arm, 0, 4, 0, 0,Alguna
+
+leftArmAgilityInStrength,arm, 0, 0, 1, 3,Alguna
+leftArmAgilityInDefense,arm, 0, 0, 2, 2,Alguna
+leftArmAgilityInAgility,arm, 0, 0, 3, 1,Alguna
+
+# Brazos derechos del robot
+
+rightArmStrengthInStrength,arm, 2, 0, 0, 2,Alguna
+rightArmStrengthInDefense,arm, 3, 0, 0, 1,Alguna
+rightArmStrengthInAgility,arm, 3, 0, 0, 1,Alguna
+
+rightArmDefenseInStrength,arm, 2, 2, 0, 0,Alguna
+rightArmDefenseInDefense,arm, 1, 3, 0, 0,Alguna
+rightArmDefenseInAgility,arm, 2, 2, 0, 0,Alguna
+
+rightArmAgilityInStrength,arm, 0, 0, 1, 3,Alguna
+rightArmAgilityInDefense,arm, 0, 0, 2, 2,Alguna
+rightArmAgilityInAgility,arm, 0, 0, 3, 1,Alguna
+
+# Piernas del robot
+
+legsStrengthInStrength,legs, 3, 0, 1, 0,Alguna
+legsStrengthInDefense,legs, 3, 0, 1, 0,Alguna
+legsStrengthInAgility,legs, 3, 0, 1, 0,Alguna
+
+legsDefenseInStrength,legs, 0, 3, 1, 0,Alguna
+legsDefenseInDefense,legs, 0, 3, 1, 0,Alguna
+legsDefenseInAgility,legs, 0, 3, 1, 0,Alguna
+
+legsAgilityInStrength,legs, 1, 0, 3, 0,Alguna
+legsAgilityInDefense,legs, 0, 1, 3, 0,Alguna
+legsAgilityInAgility,legs, 0, 0, 3, 1,Alguna

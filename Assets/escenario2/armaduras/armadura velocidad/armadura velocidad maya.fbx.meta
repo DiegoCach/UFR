@@ -1,0 +1,175 @@
+fileFormatVersion: 2
+guid: 2ec56aec7cd42ba4ab122726252c5e7d
+timeCreated: 1519408487
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: ARMADURA:alas
+    100004: ARMADURA:hombro_izquierdo
+    100006: ARMADURA:Object001
+    100008: ARMADURA:pie_izquierdo
+    100010: ARMADURA:pierna_derecha
+    100012: ARMADURA:primer_robot2_polySurface3
+    100014: ARMADURA:primer_robot2_polySurface4
+    100016: ARMADURA:primer_robot2_primer_robot2_calzones
+    100018: ARMADURA:primer_robot2_primer_robot2_pCube003
+    100020: ARMADURA:primer_robot2_primer_robot2_pCube2
+    100022: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_pPlane2
+    100024: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_CHALECO
+    100026: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_cintura
+    100028: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_hombrera2
+    100030: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_Line004
+    100032: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_Line005
+    100034: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_Line006
+    100036: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_mandibula
+    400000: //RootNode
+    400002: ARMADURA:alas
+    400004: ARMADURA:hombro_izquierdo
+    400006: ARMADURA:Object001
+    400008: ARMADURA:pie_izquierdo
+    400010: ARMADURA:pierna_derecha
+    400012: ARMADURA:primer_robot2_polySurface3
+    400014: ARMADURA:primer_robot2_polySurface4
+    400016: ARMADURA:primer_robot2_primer_robot2_calzones
+    400018: ARMADURA:primer_robot2_primer_robot2_pCube003
+    400020: ARMADURA:primer_robot2_primer_robot2_pCube2
+    400022: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_pPlane2
+    400024: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_CHALECO
+    400026: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_cintura
+    400028: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_hombrera2
+    400030: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_Line004
+    400032: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_Line005
+    400034: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_Line006
+    400036: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_mandibula
+    2300000: ARMADURA:alas
+    2300002: ARMADURA:hombro_izquierdo
+    2300004: ARMADURA:Object001
+    2300006: ARMADURA:pie_izquierdo
+    2300008: ARMADURA:pierna_derecha
+    2300010: ARMADURA:primer_robot2_polySurface3
+    2300012: ARMADURA:primer_robot2_polySurface4
+    2300014: ARMADURA:primer_robot2_primer_robot2_calzones
+    2300016: ARMADURA:primer_robot2_primer_robot2_pCube003
+    2300018: ARMADURA:primer_robot2_primer_robot2_pCube2
+    2300020: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_pPlane2
+    2300022: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_CHALECO
+    2300024: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_cintura
+    2300026: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_hombrera2
+    2300028: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_Line004
+    2300030: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_Line005
+    2300032: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_Line006
+    2300034: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_mandibula
+    3300000: ARMADURA:alas
+    3300002: ARMADURA:hombro_izquierdo
+    3300004: ARMADURA:Object001
+    3300006: ARMADURA:pie_izquierdo
+    3300008: ARMADURA:pierna_derecha
+    3300010: ARMADURA:primer_robot2_polySurface3
+    3300012: ARMADURA:primer_robot2_polySurface4
+    3300014: ARMADURA:primer_robot2_primer_robot2_calzones
+    3300016: ARMADURA:primer_robot2_primer_robot2_pCube003
+    3300018: ARMADURA:primer_robot2_primer_robot2_pCube2
+    3300020: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_pPlane2
+    3300022: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_CHALECO
+    3300024: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_cintura
+    3300026: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_hombrera2
+    3300028: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_Line004
+    3300030: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_Line005
+    3300032: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_Line006
+    3300034: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_mandibula
+    4300000: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_Line006
+    4300002: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_pPlane2
+    4300004: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_cintura
+    4300006: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_hombrera2
+    4300008: ARMADURA:primer_robot2_polySurface3
+    4300010: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_Line005
+    4300012: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_Line004
+    4300014: ARMADURA:alas
+    4300016: ARMADURA:Object001
+    4300018: ARMADURA:hombro_izquierdo
+    4300020: ARMADURA:pie_izquierdo
+    4300022: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_mandibula
+    4300024: ARMADURA:primer_robot2_primer_robot2_calzones
+    4300026: ARMADURA:pierna_derecha
+    4300028: ARMADURA:primer_robot2_primer_robot2_primer_robot2_primer_robot_primer_robot_robot_rig_robot_rig_robot_rig_robot_rig_riggeibueno_robot_para_maya_CHALECO
+    4300030: ARMADURA:primer_robot2_polySurface4
+    4300032: ARMADURA:primer_robot2_primer_robot2_pCube2
+    4300034: ARMADURA:primer_robot2_primer_robot2_pCube003
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,142 @@
+fileFormatVersion: 2
+guid: d8c5b6e756ac89e4f8a99aeba577b3a8
+timeCreated: 1519664444
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: BaseGrua
+    100002: //RootNode
+    100004: CuerdasGancho
+    100006: Faros
+    100008: Gancho
+    100010: Grua
+    100012: Object001
+    100014: ParaChoques
+    100016: retrovisore
+    100018: rueda
+    100020: Ruedas
+    100022: Vallas
+    100024: ventatas2
+    400000: BaseGrua
+    400002: //RootNode
+    400004: CuerdasGancho
+    400006: Faros
+    400008: Gancho
+    400010: Grua
+    400012: Object001
+    400014: ParaChoques
+    400016: retrovisore
+    400018: rueda
+    400020: Ruedas
+    400022: Vallas
+    400024: ventatas2
+    2300000: BaseGrua
+    2300002: CuerdasGancho
+    2300004: Faros
+    2300006: Gancho
+    2300008: Grua
+    2300010: Object001
+    2300012: ParaChoques
+    2300014: retrovisore
+    2300016: rueda
+    2300018: Vallas
+    2300020: ventatas2
+    3300000: BaseGrua
+    3300002: CuerdasGancho
+    3300004: Faros
+    3300006: Gancho
+    3300008: Grua
+    3300010: Object001
+    3300012: ParaChoques
+    3300014: retrovisore
+    3300016: rueda
+    3300018: Vallas
+    3300020: ventatas2
+    4300000: ventatas2
+    4300002: retrovisore
+    4300004: Faros
+    4300006: Vallas
+    4300008: Object001
+    4300010: ParaChoques
+    4300012: Grua
+    4300014: Gancho
+    4300016: CuerdasGancho
+    4300018: BaseGrua
+    4300020: rueda
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
