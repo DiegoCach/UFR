@@ -46,7 +46,11 @@ public class GameManager : NetworkBehaviour
     public Image[] roundsWon;
     public GameObject menuExit;
 
+    public GameObject tornado;
+
     //variablesSync
+    [SyncVar]
+    private float timer, spawnTime, maxTime = 30f, minTime = 15f;
     [SyncVar]
     public float player1Hp;
     [SyncVar]
@@ -97,12 +101,13 @@ public class GameManager : NetworkBehaviour
         player1 = GameObject.Find("Player1");
         player2 = GameObject.Find("Player2");
         findP2 = true;
-
+        CmdSetRandomTime();
     }
 
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
         if (bar == null || barp2 == null)
         {
             bar = GameObject.Find("bar");
@@ -110,6 +115,13 @@ public class GameManager : NetworkBehaviour
         }
         player1 = GameObject.Find("Player1");
         player2 = GameObject.Find("Player2");
+
+        if (timer >= spawnTime)
+        {
+            CmdSpawnObject();
+            CmdSetRandomTime();
+        }
+
         timeContinue += Time.deltaTime;
 
         if (findP2 && player1 != null)
@@ -170,6 +182,18 @@ public class GameManager : NetworkBehaviour
             rounds++;
 
         }
+    }
+    [Command]
+    void CmdSetRandomTime()
+    {
+        spawnTime = Random.Range(minTime, maxTime);
+    }
+    [Command]
+    void CmdSpawnObject()
+    {
+        timer = 0;
+        GameObject torn = Instantiate(tornado, tornado.transform.position, tornado.transform.rotation);
+        NetworkServer.Spawn(torn);
     }
 
     [ClientRpc]

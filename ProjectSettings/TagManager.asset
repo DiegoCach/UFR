@@ -12,6 +12,7 @@ TagManager:
   - ItemSlotList
   - Player_def
   - Player_atak
+  - Patron
   layers:
   - Default
   - TransparentFX
@@ -48,4 +49,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 321308943
     locked: 0

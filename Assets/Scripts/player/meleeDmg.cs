@@ -17,11 +17,11 @@ public class meleeDmg : NetworkBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if ( int.Parse(other.GetComponent<NetworkIdentity>().netId.ToString()) == 6)
+        if ( int.Parse(other.GetComponent<NetworkIdentity>().netId.ToString()) == 10)
         {
             GameManager.init.player1Hp--;
             StartCoroutine(TakeDmg(other.GetComponent<Animator>(), other.gameObject));
-        } else if (int.Parse(other.GetComponent<NetworkIdentity>().netId.ToString()) == 7)
+        } else if (int.Parse(other.GetComponent<NetworkIdentity>().netId.ToString()) == 11)
         {
             GameManager.init.player2Hp--;
             StartCoroutine(TakeDmg(other.GetComponent<Animator>(), other.gameObject));
