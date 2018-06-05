@@ -35,9 +35,10 @@ public class Abilities : NetworkBehaviour
     private float timeinvisible;
     private float timeRecharge;
     private float timeExplosion;
-    private int PasiveDamageBullet;//daño de la ultima bala de la habilidad pasiva
+    private int PasiveDamageBullet;
     private float dash;
     public GameObject player;
+    public Transform armT;
     // Use this for initialization
 
     void Awake()
@@ -113,10 +114,6 @@ public class Abilities : NetworkBehaviour
         //habilidades pasivas
         if (typeDef)
         {
-            /**
-	 		* escudo durante un tiempo 
-			 **/
-            //abilitiePasiveShildHP ();
             CmdabilitiePasiveShildHP();
         }
         else if (typeAtk)
@@ -239,8 +236,6 @@ public class Abilities : NetworkBehaviour
             for (var j = 0; j < a[y].materials.Length; j++)
             {
                 a[y].materials[j].shader = Shader.Find("Standard");
-                //smoke = GameObject.Find("Player1/humo");
-                //smoke.GetComponent<Renderer>().material.shader = Shader.Find("Mobile/Particles/Alpha Blended");
             }
 
         }
@@ -319,18 +314,17 @@ public class Abilities : NetworkBehaviour
         GameManager.init.speed = GameManager.init.speedNormal;
     }
 
-    public Transform armT;
+
     [Command]
     public void CmdShield(Vector3 arm)
     {
         armT = this.transform.Find("SpawnR").transform;
         armT.position = arm;
-        GameObject clon = (GameObject)Instantiate(shield, armT.position, Quaternion.identity, armT);//emparentar
+        GameObject clon = (GameObject)Instantiate(shield, armT.position, Quaternion.identity, armT);
         clon.transform.LookAt(target);
         Destroy(clon, timeShield);
         timeA += Time.deltaTime;
         NetworkServer.Spawn(clon);
-        //instancia un escudo inpenetrable que se puede arrastrar 
     }
 
     [Command]

@@ -5,9 +5,9 @@ using UnityEngine.Networking;
 
 public class Attack : NetworkBehaviour  
 {
-	private bool BvsBRigth=false;//si es cuerpo a cuerpo
+	private bool BvsBRigth=false;//if its melee
 	private bool BvsBLeft=true;
-	private bool shooterI=false;//si dispara
+	private bool shooterI=false;//if can shoot
 	private bool shooterR=true;
 	private bool rechargePass = false;
     CharacterController character;
@@ -60,7 +60,7 @@ public class Attack : NetworkBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse1)&&BvsBRigth) 																
 		{
-			//animacion
+			//animation
 			atackSword += 1;
 			Debug.Log("golpe");
 			anim.SetFloat ("atackSword", atackSword);
@@ -82,13 +82,9 @@ public class Attack : NetworkBehaviour
             CmdarmAssignI();
             Debug.Log("soy Cliente" + this.isClient);
             Debug.Log("soy Servidor" + this.isServer);
-            //shooterFalse (spawnI);
             CmdShooter();
             Debug.Log("disparo");
-            atackPistol += 1;
-            anim.SetFloat("atackSword", atackPistol);
-            Invoke("volveranim", 0.5f);
-            //animacion
+            //animation
         }
 
         if (Input.GetButtonDown("Fire2")&& shooterR && rechargePass==false) 																
@@ -96,13 +92,8 @@ public class Attack : NetworkBehaviour
             CmdarmAssignR();
             CmdShooter();
             atackPistol += 1;
-            anim.SetFloat("atackSword", atackPistol);
-            Invoke("volveranim", 0.5f);
-            //animacion
+            //animation
         }
-
-        //rechargeBullet ();
-        //spawnI.Rotate(mainCameraComponent.transform.rotation.eulerAngles.x,0,0);
     }
 
     //combo
@@ -164,51 +155,12 @@ public class Attack : NetworkBehaviour
             noOfClicks = 0;
         }
     }
-
+    //deactivates collider for melee
     public void deactivateCol()
     {
         CmdDeactivateCol();
     }
 
-    //metodos
-
-    public void Shooter(Transform arm)
-	{
-		if(timeA>=GameManager.init.frequency)
-		{
-			GameObject clon = (GameObject)Instantiate (prefab, arm.position, Quaternion.identity);
-			clon.GetComponent<Rigidbody> ().AddForce (arm.transform.forward *forceAtack, ForceMode.Impulse);
-			timeA = 0;
-			bullet--;
-			Destroy (clon, 5);
-			//animacion
-		}
-	}
-
-	IEnumerator recharge()
-	{
-		yield return new WaitForSeconds(timeRechange);
-		bullet = GameManager.init.bullet;//numero del gameControler
-		rechargePass = false;
-	}
-
-
-	private void volveranim ()
-	{
-        CmdDeactivateCol();
-    }
-
-    //bala falsa
-    public void shooterFalse(Transform armF)
-    {
-        GameObject falseClon = (GameObject)Instantiate(prefab, armF.position, Quaternion.identity);
-        falseClon.GetComponent<Rigidbody>().AddForce(armF.transform.forward * forceAtack, ForceMode.Impulse);
-        timeA = 0;
-        bullet--;
-        falseClon.name = "clonFalse";
-        falseClon.transform.Translate(GameObject.Find("Bullet").transform.position);
-        Destroy(falseClon, 0.5f);
-    }
 
     void CmdShooter()
     {
@@ -235,15 +187,6 @@ public class Attack : NetworkBehaviour
         }
     }
 
-    private void rechargeBullet()
-    {
-        if (bullet <= 0)
-        {
-            rechargePass = true;
-            bullet = 0;
-            StartCoroutine(recharge());
-        }
-    }
 
 
     [Command]
@@ -269,7 +212,7 @@ public class Attack : NetworkBehaviour
         }
     }
 
-    //sincronizacion de los brazos al servidor 
+    //Syncronitaztion with server
     [Command]
     public void CmdarmAssignI()
     {

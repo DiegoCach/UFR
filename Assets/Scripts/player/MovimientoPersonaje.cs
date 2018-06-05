@@ -41,8 +41,6 @@ public class MovimientoPersonaje : NetworkBehaviour
             mainCamera.name = "CameraRigPlayer1";
             CameraRig.target = transform;
             showInInspect = CameraRig.target;
-            //localPlayerAuthority
-
             attack = GetComponent<Attack>();
             playerRb = GetComponent<Rigidbody>();
             anim = GetComponent<Animator>();
@@ -68,17 +66,11 @@ public class MovimientoPersonaje : NetworkBehaviour
 
 		if (isLocalPlayer) {
 			GameManager.init.speed = speed;
-			//-------------------------------------------------------------------------------------------------------------------------
-
-			//Llamamos a la coorrutinas para ejecutar las animaciones cuando nos movamos:
 			StartCoroutine ("Move");
-			moveX = 0.0f; //Cambia las variables del Blend Tree que controla las animaciones
+			moveX = 0.0f; 
 			anim.SetFloat ("BlendX", moveX);
 			moveZ = 0.0f;
 			anim.SetFloat ("BlendZ", moveZ);
-			//anim.SetBool("jumping", false);
-			//-------------------------------------------------------------------------------------------------------------------------
-			//Rotacion con respecto a la camara
 			Quaternion CharacterRotation = mainCamera.transform.GetChild (0).transform.GetChild (0).GetComponent<Camera> ().transform.rotation;
 			CharacterRotation.x = 0;
 			CharacterRotation.z = 0;
@@ -193,7 +185,6 @@ public class MovimientoPersonaje : NetworkBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && attack.isAttaking == false && isJumping == false)
 		{
-            //anim.SetBool("jumping", true);
             isJumping = true;
 			for (float i = 0.0f; i <= 5.0f; i += 1f) 
 			{
@@ -238,9 +229,6 @@ public class MovimientoPersonaje : NetworkBehaviour
                 yield return null;
 			}
 			
-			//anim.SetFloat ("BlendR", -2);
-
-			//yield return null;
 		}else if (!Input.GetKey (KeyCode.LeftShift) && character.isGrounded) {
 			anim.SetFloat ("BlendR", -2);
 			moveR = 0;

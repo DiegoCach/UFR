@@ -45,7 +45,7 @@ public class GameManager : NetworkBehaviour
     public GameObject barp2;
     public Image[] roundsWon;
     public GameObject menuExit;
-    //public NetworkClient client;
+
     //variablesSync
     [SyncVar]
     public float player1Hp;
@@ -312,16 +312,6 @@ public class GameManager : NetworkBehaviour
                 GameObject.Find("antde").name = "Hip9";
                 GameObject.Find("antiz").name = "Hip10";
             }
-			/*if (GameObject.Find ("leftArm")) 
-			{
-				pieceData = combatPieces.legs;
-				findPartBody(pieceData);
-			}
-			if (GameObject.Find ("rigthArm")) 
-			{
-				pieceData = combatPieces.legs;
-				findPartBody(pieceData);
-			}*/
         }
     }
 
@@ -368,8 +358,6 @@ public class GameManager : NetworkBehaviour
         bodyCombatPieces.chest = pieceRobot;
         pieceRobot = Resources.Load("data/legs/" + leg2, typeof(Piece)) as Piece;
         bodyCombatPieces.legs = pieceRobot;
-		//bodyCombatPieces.leftArm=
-		//bodyCombatPieces.rightArm=
         return GameObject.Find("CombatPieces").GetComponent<CombatPieces>();
     }
     ///<summary>
@@ -386,8 +374,6 @@ public class GameManager : NetworkBehaviour
         bodyCombatPieces.chest = pieceRobot;
         pieceRobot = Resources.Load("data/legs/" + leg, typeof(Piece)) as Piece;
         bodyCombatPieces.legs = pieceRobot;
-		//bodyCombatPieces.leftArm=
-		//bodyCombatPieces.rightArm=
         return GameObject.Find("CombatPieces").GetComponent<CombatPieces>();
 
     }
@@ -408,8 +394,6 @@ public class GameManager : NetworkBehaviour
                 head = find.head.name;
 				chest = find.chest.name;
 				leg = find.legs.name;
-				//leftArm = find.leftArm.name;
-				//rigthArm=find.rightArm.name;
             }
         }
         if (!hasAuthority)
@@ -418,11 +402,7 @@ public class GameManager : NetworkBehaviour
 			head2 = find.head.name;
 			chest2 = find.chest.name;
 			leg2 = find.legs.name;
-			//leftArm2 = find.leftArm.name;
-			//rigthArm2=find.rightArm.name;
 			SendSomethingToServer(head2, chest2, leg2,leftArm2,rigthArm2);
-            //NetworkServer.UnregisterHandler (CustomMsgID.Something);
-            //CmdEnviar(head2);
         }
     }
 
