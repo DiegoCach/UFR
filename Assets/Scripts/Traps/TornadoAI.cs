@@ -18,8 +18,7 @@ public class TornadoAI : NetworkBehaviour {
     void OnEnable()
     {
         agent = GetComponent<NavMeshAgent>();
-        timer = wanderTimer;
-        
+        timer = wanderTimer;   
     }
 
     // Update is called once per frame
@@ -35,6 +34,11 @@ public class TornadoAI : NetworkBehaviour {
             timer = 0;
         }
 
+        if (destroyTimer >= 13f)
+        {
+            Destroy(gameObject);
+        }
+
         if (gameObject.transform.GetChild(5) != null)
         {
             if (destroyTimer >= 12f && (gameObject.transform.GetChild(5).gameObject.name == "Player1" || gameObject.transform.GetChild(5).gameObject.name == "Player2"))
@@ -42,11 +46,6 @@ public class TornadoAI : NetworkBehaviour {
                 activate(gameObject.transform.GetChild(5).gameObject);
                 gameObject.transform.GetChild(5).gameObject.transform.parent = null;
             }
-        }
-
-        if (destroyTimer >= 13f)
-        {
-            Destroy(gameObject);
         }
     }
 
