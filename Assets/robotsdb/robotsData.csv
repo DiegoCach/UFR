@@ -20,12 +20,12 @@ name,bodySite,rarity,damage,life,speedMovement,cadence,description
 
 # Armas izquierdas del robot
 
-# ,la_001,LeftWeapon,Normal,2,0,1,2,alguna tiene que tener
+la_001,LeftWeapon,Normal,2,0,1,2,alguna tiene que tener
 # ,la_002,LeftWeapon,Rare,1,0,3,1,alguna tiene que tener
 
 # Armas derechas del robot
 
-# ,ra_001,RightWeapon,Epic,5,0,3,7,alguna tiene que tener
+ra_001,RightWeapon,Epic,5,0,3,7,alguna tiene que tener
 # ,ra_002,RightWeapon,Rare,1,1,4,3,alguna tiene que tener
 
 # Piernas del robot

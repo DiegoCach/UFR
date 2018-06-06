@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using System;
 public class ChangeScenes :NetworkBehaviour {
 
 	int num = 1;
@@ -27,7 +28,18 @@ public class ChangeScenes :NetworkBehaviour {
 		CombatPieces find=GameObject.Find ("CombatPieces").GetComponent<CombatPieces> ();
 		if(find.head != null && find.chest != null && find.legs != null)
 		{
-			SceneManager.LoadScene(scene);
+			if(find.leftArm!=null || find.rightArm!=null)
+			{
+				string[] textSplit= GameObject.Find ("damageS").GetComponent<Text> ().text.Split(" "[0]);
+				find.damageT =Convert.ToInt32 (textSplit [1]);
+				textSplit=GameObject.Find("lifeS").GetComponent<Text> ().text.Split(" "[0]);
+				find.lifeT =Convert.ToInt32 (textSplit [1]);
+				textSplit=GameObject.Find("velocityS").GetComponent<Text> ().text.Split(" "[0]);
+				find.velocityT =Convert.ToInt32 (textSplit [1]);
+				textSplit=GameObject.Find("cadenceS").GetComponent<Text> ().text.Split(" "[0]);
+				find.cadenceT =Convert.ToInt32 (textSplit [1]);
+				SceneManager.LoadScene(scene);
+			}
 		}
 	}
 
@@ -78,7 +90,7 @@ public class ChangeScenes :NetworkBehaviour {
 	{
 		if(texto.text=="Player Ataque")
 		{
-			ArrayList stats=SkeletonStats (1, 1, 1, 1);
+			ArrayList stats=SkeletonStats (3, 3, 3, 3);
 			GameObject.Find ("damageS").GetComponent<Text> ().text = "Daño: "+ stats [0].ToString();
 			GameObject.Find("lifeS").GetComponent<Text> ().text="Vida: "+ stats [1].ToString();
 			GameObject.Find("velocityS").GetComponent<Text> ().text="Velocidad: "+ stats [2].ToString();
@@ -95,7 +107,7 @@ public class ChangeScenes :NetworkBehaviour {
 		}
 		if(texto.text=="Player Velocidad")
 		{
-			ArrayList stats=SkeletonStats (3, 3, 3, 3);
+			ArrayList stats=SkeletonStats (1, 1, 1, 1);
 			GameObject.Find ("damageS").GetComponent<Text> ().text = "Daño: "+ stats [0].ToString();
 			GameObject.Find("lifeS").GetComponent<Text> ().text="Vida: "+ stats [1].ToString();
 			GameObject.Find("velocityS").GetComponent<Text> ().text="Velocidad: "+ stats [2].ToString();

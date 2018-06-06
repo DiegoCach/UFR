@@ -256,7 +256,6 @@ public class GameManager : NetworkBehaviour
     ///</summary>
     public void wearRobotStart()
     {
-        //wear no deberia ser si eres el cliente
         if (host)
         {
             CombatPieces combatPieces = Wear();
@@ -292,6 +291,18 @@ public class GameManager : NetworkBehaviour
                     GameObject.Find("footiz").name = "Hip8";
                     GameObject.Find("antde").name = "Hip9";
                     GameObject.Find("antiz").name = "Hip10";
+                }
+                if (GameObject.Find("leftArm"))
+                {
+                    pieceData = combatPieces.leftArm;
+                    findPartBody(pieceData);
+                    GameObject.Find("leftArm").name = "LeftArm";
+                }
+                if (GameObject.Find("rightArm"))
+                {
+                    pieceData = combatPieces.rightArm;
+                    findPartBody(pieceData);
+                    GameObject.Find("rightArm").name = "RigthArm";
                 }
                 //WearOnline para las piezas del otro player en la siguiente itineracion
                 if (!hasAuthority)
@@ -335,6 +346,18 @@ public class GameManager : NetworkBehaviour
                 GameObject.Find("footiz").name = "Hip8";
                 GameObject.Find("antde").name = "Hip9";
                 GameObject.Find("antiz").name = "Hip10";
+            }
+            if (GameObject.Find("leftArm"))
+            {
+                pieceData = combatPieces.leftArm;
+                findPartBody(pieceData);
+                GameObject.Find("leftArm").name = "LeftArm";
+            }
+            if (GameObject.Find("rightArm"))
+            {
+                pieceData = combatPieces.rightArm;
+                findPartBody(pieceData);
+                GameObject.Find("rightArm").name = "RigthArm";
             }
         }
     }
@@ -382,6 +405,8 @@ public class GameManager : NetworkBehaviour
         bodyCombatPieces.chest = pieceRobot;
         pieceRobot = Resources.Load("data/legs/" + leg2, typeof(Piece)) as Piece;
         bodyCombatPieces.legs = pieceRobot;
+        bodyCombatPieces.leftArm = Resources.Load("data/leftArms/" + leftArm2, typeof(Piece)) as Piece;
+        bodyCombatPieces.rightArm = Resources.Load("data/rightArms/" + rigthArm2, typeof(Piece)) as Piece;
         return GameObject.Find("CombatPieces").GetComponent<CombatPieces>();
     }
     ///<summary>
@@ -398,6 +423,9 @@ public class GameManager : NetworkBehaviour
         bodyCombatPieces.chest = pieceRobot;
         pieceRobot = Resources.Load("data/legs/" + leg, typeof(Piece)) as Piece;
         bodyCombatPieces.legs = pieceRobot;
+        bodyCombatPieces.leftArm = Resources.Load("data/leftArms/" + leftArm, typeof(Piece)) as Piece;
+        bodyCombatPieces.rightArm = Resources.Load("data/rightArms/" + rigthArm, typeof(Piece)) as Piece;
+        Debug.Log(rigthArm);
         return GameObject.Find("CombatPieces").GetComponent<CombatPieces>();
 
     }
@@ -410,23 +438,42 @@ public class GameManager : NetworkBehaviour
         // Player1
         if (hasAuthority)
         {
-			CombatPieces find= GameObject.Find ("CombatPieces").GetComponent<CombatPieces> ();
-			if (find.head != null &&
-				find.chest != null &&
-				find.legs != null)
+            CombatPieces find = GameObject.Find("CombatPieces").GetComponent<CombatPieces>();
+            if (find.head != null &&
+                find.chest != null &&
+                find.legs != null)
             {
                 head = find.head.name;
-				chest = find.chest.name;
-				leg = find.legs.name;
+                chest = find.chest.name;
+                leg = find.legs.name;
+                if (find.leftArm != null)
+                {
+                    leftArm = find.leftArm.name;
+                }
+                if (find.rightArm != null)
+                {
+                    rigthArm = find.rightArm.name;
+                }
+                //rigthArm=find.rightArm.name;
             }
         }
         if (!hasAuthority)
         {
-			CombatPieces find= GameObject.Find ("CombatPieces").GetComponent<CombatPieces> ();
-			head2 = find.head.name;
-			chest2 = find.chest.name;
-			leg2 = find.legs.name;
-			SendSomethingToServer(head2, chest2, leg2,leftArm2,rigthArm2);
+            CombatPieces find = GameObject.Find("CombatPieces").GetComponent<CombatPieces>();
+            head2 = find.head.name;
+            chest2 = find.chest.name;
+            leg2 = find.legs.name;
+            if (find.leftArm != null)
+            {
+                leftArm2 = find.leftArm.name;
+            }
+            if (find.rightArm != null)
+            {
+                rigthArm2 = find.rightArm.name;
+            }
+            SendSomethingToServer(head2, chest2, leg2, leftArm2, rigthArm2);
+            //NetworkServer.UnregisterHandler (CustomMsgID.Something);
+            //CmdEnviar(head2);
         }
     }
 
@@ -449,7 +496,7 @@ public class GameManager : NetworkBehaviour
     ///</summary>
     public class SomethingMessage : MessageBase
     {
-        public string headE, chestE, legE,rigthArmE,leftArmE;
+        public string headE, chestE, legE, rigthArmE, leftArmE;
     }
 
     ///<summary>
@@ -463,8 +510,8 @@ public class GameManager : NetworkBehaviour
         msg.headE = headR;
         msg.chestE = chestR;
         msg.legE = legR;
-		msg.leftArmE = leftArmR;
-		msg.rigthArmE = rigthArmR;
+        msg.leftArmE = leftArmR;
+        msg.rigthArmE = rigthArmR;
         GameObject.Find("NetworkController").GetComponent<NetworkController>().client.Send(CustomMsgID.Something, msg);
 
     }
@@ -478,8 +525,8 @@ public class GameManager : NetworkBehaviour
         GameManager.init.head2 = msg.headE;
         GameManager.init.chest2 = msg.chestE;
         GameManager.init.leg2 = msg.legE;
-		GameManager.init.leftArm2 = msg.leftArmE;
-		GameManager.init.leftArm2 = msg.rigthArmE;
+        GameManager.init.leftArm2 = msg.leftArmE;
+        GameManager.init.rigthArm2 = msg.rigthArmE;
     }
 
     [ClientRpc]

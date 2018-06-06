@@ -12,6 +12,10 @@ public class CombatPieces : NetworkBehaviour
     public Piece head;
     public Piece chest;
     public string typeRobot;
+	public int damageT;
+	public int lifeT;
+	public int velocityT;
+	public int cadenceT;
     // Use this for initialization
     void Start()
     {
