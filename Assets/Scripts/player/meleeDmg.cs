@@ -6,6 +6,7 @@ using UnityEngine;
 public class meleeDmg : NetworkBehaviour {
 
 
+
     void Start () {
 		
 	}
@@ -17,6 +18,7 @@ public class meleeDmg : NetworkBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+        var script = other.gameObject.GetComponent<EffectsRobots>();
         if ( int.Parse(other.GetComponent<NetworkIdentity>().netId.ToString()) == 10)
         {
             GameManager.init.player1Hp--;
@@ -25,6 +27,19 @@ public class meleeDmg : NetworkBehaviour {
         {
             GameManager.init.player2Hp--;
             StartCoroutine(TakeDmg(other.GetComponent<Animator>(), other.gameObject));
+        }
+
+        switch (other.gameObject.name)
+        {
+            case "Robotin1":
+                script.robot1 = true;
+                break;
+            case "Robotin2":
+                script.robot2 = true;
+                break;
+            case "Robotin3":
+                script.robot3 = true;
+                break;
         }
     }
 
