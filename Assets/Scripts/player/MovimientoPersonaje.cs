@@ -264,7 +264,7 @@ public class MovimientoPersonaje : NetworkBehaviour
                 twoKeys = true;
             }
             moveDirection = transform.TransformDirection (moveDirection);//direccion del vector es la direccion de nuetro transform
-            if ((Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftControl) || slow == true) && !Input.GetKey(KeyCode.LeftShift) && twoKeys == true)
+            if ((Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftControl) || slow == true) && !Input.GetKey(KeyCode.LeftShift))
             {
                 moveDirection *= 1.5f;
             }

@@ -35,6 +35,15 @@ public class TornadoAI : NetworkBehaviour {
             timer = 0;
         }
 
+        if (gameObject.transform.GetChild(5) != null)
+        {
+            if (destroyTimer >= 12f && (gameObject.transform.GetChild(5).gameObject.name == "Player1" || gameObject.transform.GetChild(5).gameObject.name == "Player2"))
+            {
+                activate(gameObject.transform.GetChild(5).gameObject);
+                gameObject.transform.GetChild(5).gameObject.transform.parent = null;
+            }
+        }
+
         if (destroyTimer >= 13f)
         {
             Destroy(gameObject);
@@ -56,12 +65,12 @@ public class TornadoAI : NetworkBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (int.Parse(other.GetComponent<NetworkIdentity>().netId.ToString()) == 6)
+        if (int.Parse(other.GetComponent<NetworkIdentity>().netId.ToString()) == 10)
         {
             other.transform.parent = gameObject.transform;
             deactivate(other.gameObject);
         }
-        else if (int.Parse(other.GetComponent<NetworkIdentity>().netId.ToString()) == 7)
+        else if (int.Parse(other.GetComponent<NetworkIdentity>().netId.ToString()) == 11)
         {
             other.transform.parent = gameObject.transform;
             deactivate(other.gameObject);
@@ -73,5 +82,12 @@ public class TornadoAI : NetworkBehaviour {
         player.GetComponent<MovimientoPersonaje>().enabled = false;
         player.GetComponent<Attack>().enabled = false;
         player.GetComponent<Abilities>().enabled = false;
+    }
+
+    private void activate(GameObject player)
+    {
+        player.GetComponent<MovimientoPersonaje>().enabled = true;
+        player.GetComponent<Attack>().enabled = true;
+        player.GetComponent<Abilities>().enabled = true;
     }
 }
