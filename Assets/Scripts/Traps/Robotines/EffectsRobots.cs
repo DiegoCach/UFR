@@ -25,7 +25,7 @@ public class EffectsRobots : NetworkBehaviour
         }
         if (robot1 == true)
         {
-            RobotOne(Player.transform, 3f);
+            RobotOne();
         }
         if (robot2 == true)
         {
@@ -33,16 +33,25 @@ public class EffectsRobots : NetworkBehaviour
         }
         if (robot3 == true)
         {
-
+            RobotThree(Player.transform, 3f);
         }
 	}
 
-    private void RobotOne(Transform PosicionHito, float Velocidad)
+    private void RobotOne()
     {
         if (gameObject.GetComponent<patron>().isActiveAndEnabled == true)
         {
             gameObject.GetComponent<patron>().enabled = false;
         }
         GetComponent<NavMeshAgent>().destination = Player.transform.position;
+    }
+
+    private void RobotThree(Transform PosicionHito, float Velocidad)
+    {
+        if (gameObject.GetComponent<patron>().isActiveAndEnabled == true)
+        {
+            gameObject.GetComponent<patron>().enabled = false;
+        }
+        transform.LookAt(PosicionHito);
     }
 }

@@ -20,12 +20,12 @@ name,bodySite,rarity,damage,life,speedMovement,cadence,description
 
 # Armas izquierdas del robot
 
-la_001,LeftWeapon,Normal,2,0,1,2,alguna tiene que tener
+# ,la_001,LeftWeapon,Normal,2,0,1,2,alguna tiene que tener
 # ,la_002,LeftWeapon,Rare,1,0,3,1,alguna tiene que tener
 
 # Armas derechas del robot
 
-ra_001,RightWeapon,Epic,5,0,3,7,alguna tiene que tener
+# ,ra_001,RightWeapon,Epic,5,0,3,7,alguna tiene que tener
 # ,ra_002,RightWeapon,Rare,1,1,4,3,alguna tiene que tener
 
 # Piernas del robot
@@ -33,19 +33,12 @@ ra_001,RightWeapon,Epic,5,0,3,7,alguna tiene que tener
 ls_001,Legs,Unique,5,4,10,3,alguna tiene que tener
 ls_002,Legs,Legendary,7,8,1,4,alguna tiene que tener
 ls_003,Legs,Legendary,7,8,1,4,alguna tiene que tener
-ls_004,Legs,Unique,5,4,10,3,alguna tiene que tener
-ls_005,Legs,Unique,5,4,10,3,alguna tiene que tener
 # Cascos del robot
 
 h_001,Head,Epic,4,4,5,3,alguna tiene que tener
 h_002,Head,Legendary,5,8,2,2,alguna tiene que tener
-h_003,Head,Unique,5,5,5,5,alguna tiene que tener
-h_004,Head,Unique,5,5,5,5,alguna tiene que tener
-h_005,Head,Unique,5,5,5,5,alguna tiene que tener
+
 # Pechos del robot
 
 c_001,Chest,Epic,5,4,4,3,alguna tiene que tener
 c_002,Chest,Epic,3,8,2,7,alguna tiene que tener
-c_003,Chest,Unique,5,5,5,5,alguna tiene que tener
-c_004,Chest,Unique,5,5,5,5,alguna tiene que tener
-c_005,Chest,Unique,5,5,5,5,alguna tiene que tener

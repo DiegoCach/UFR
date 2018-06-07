@@ -16762,7 +16762,6 @@ MonoBehaviour:
   robot1: 0
   robot2: 0
   robot3: 0
-  Player: {fileID: 0}
 --- !u!114 &1570836342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16795,6 +16794,27 @@ MonoBehaviour:
     i15: 252
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
+--- !u!195 &1570836343
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1570836335}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.38
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.37
+  m_BaseOffset: 0.33
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &1572264287
 GameObject:
   m_ObjectHideFlags: 0
