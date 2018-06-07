@@ -14,25 +14,13 @@ public class PieceInfo : MonoBehaviour {
 	public Piece pieceData;
 	string bodyName;
 	int valor = 0;
-	//protected List<Piece> leftArms = PiecesManager.leftArms;
+
 	void Start () {
-		//ScriptableObject.CreateInstance<Piece>()
-		/*Piece piece = ScriptableObject.CreateInstance<Piece>();
-		leftArms.Add(piece.init(pieceData.alias, pieceData.bodySite,pieceData.rarity,
-			pieceData.damage,pieceData.life,pieceData.speedMovement,
-			pieceData.cadence,pieceData.description));*/
-		//PlayerPrefs.GetString ();
-		//pieceData = (Piece) Resources.Load ("la_001");
+
 		if(pieceData != null){
-			//GetComponent<MeshFilter> ().mesh = pieceData.skin;
-			//GetComponent<MeshCollider> ().sharedMesh = pieceData.skin;
+
 		}
 
-	}
-
-	// Update is called once per frame
-	void Update () {
-		//OnPointerClick ();
 	}
 
 	public void DisplayInfo(){

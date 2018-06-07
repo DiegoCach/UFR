@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d166df06da38e4945b54bad119d399eb, type: 3}
   m_Name: ls_004
   m_EditorClassIdentifier: 
-  rarity: 5
+  rarity: 2
   bodySide: 7
   damage: 5
   life: 4

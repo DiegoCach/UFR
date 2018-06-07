@@ -1,10 +1,17 @@
 fileFormatVersion: 2
 guid: 3bc3884db27c86645a8403a80521c105
-timeCreated: 1520528426
-licenseType: Free
+timeCreated: 1528359297
+licenseType: Pro
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - slot: {instanceID: 0}
+  - inventory: {instanceID: 0}
+  - unique: {fileID: 21300000, guid: a59eb54c10622e546b4c8d9468847667, type: 3}
+  - legendary: {fileID: 21300000, guid: 186763078597db44396f1efa920838eb, type: 3}
+  - normal: {fileID: 21300000, guid: d6d5a4b3e1309704ab6b705983d21a8a, type: 3}
+  - rare: {fileID: 21300000, guid: d6d5a4b3e1309704ab6b705983d21a8a, type: 3}
+  - epic: {fileID: 21300000, guid: 1400c49c21f8dc041b26bf4ddff89827, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

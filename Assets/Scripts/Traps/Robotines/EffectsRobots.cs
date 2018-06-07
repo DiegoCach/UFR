@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Networking;
+using UnityEngine.AI;
 using UnityEngine;
 
 public class EffectsRobots : NetworkBehaviour
 {
     public bool robot1 = false, robot2 = false, robot3 = false;
-    public GameObject Player;
+    private GameObject Player , Player2;
 	// Use this for initialization
 	void Start () {
 		
@@ -14,9 +15,17 @@ public class EffectsRobots : NetworkBehaviour
 	
 	// Update is called once per frame
 	void Update () {
+        if (Player == null)
+        {
+            Player = GameObject.Find("Player1");
+        }
+        if (Player2 == null)
+        {
+            Player2 = GameObject.Find("Player2");
+        }
         if (robot1 == true)
         {
-            RobotOne(Player.transform.position, 3f);
+            RobotOne(Player.transform, 3f);
         }
         if (robot2 == true)
         {
@@ -28,21 +37,12 @@ public class EffectsRobots : NetworkBehaviour
         }
 	}
 
-    private void RobotOne(Vector3 PosicionHito, float Velocidad)
+    private void RobotOne(Transform PosicionHito, float Velocidad)
     {
         if (gameObject.GetComponent<patron>().isActiveAndEnabled == true)
         {
-            gameObject.GetComponent<patron>().gameObject.SetActive(false);
+            gameObject.GetComponent<patron>().enabled = false;
         }
-        Vector3 VectorHaciaObjetivo = PosicionHito - transform.position;
-
-        VectorHaciaObjetivo.Normalize();
-        VectorHaciaObjetivo *= Velocidad;
-        VectorHaciaObjetivo = new Vector3(VectorHaciaObjetivo.x,
-                                          VectorHaciaObjetivo.y,
-                                          VectorHaciaObjetivo.z);
-
-        transform.Translate(VectorHaciaObjetivo * Time.deltaTime, Space.World);
-        transform.rotation = Quaternion.LookRotation(VectorHaciaObjetivo);
+        GetComponent<NavMeshAgent>().destination = Player.transform.position;
     }
 }
