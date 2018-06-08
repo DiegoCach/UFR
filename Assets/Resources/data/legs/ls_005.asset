@@ -19,15 +19,15 @@ MonoBehaviour:
   cadence: 3
   description: alguna tiene que tener
   skins:
-  - {fileID: 1978506497999530, guid: 837333757266dc749be4805ef2d07077, type: 2}
-  - {fileID: 1040377902681442, guid: 8caa71a6d7c155b4bb05116f7a9864ad, type: 2}
-  - {fileID: 1560698452754648, guid: ac56ec4ab723413498362980a4f26e55, type: 2}
-  - {fileID: 1535044681140938, guid: f3d1248b293ee3b40ac1a875cba7144d, type: 2}
-  - {fileID: 1880269057607656, guid: 9997efcac0eece942abb8a998d51cc23, type: 2}
-  - {fileID: 1182852345778540, guid: 9cb702d09d9799b47bf99ab88c67f787, type: 2}
+  - {fileID: 1738827571581188, guid: 702df5570e67baf4694daaa1e3deac12, type: 2}
+  - {fileID: 1163694345385342, guid: 933acb1758d614943ba1d15997f7b04e, type: 2}
+  - {fileID: 1158208085055196, guid: f64398e2e14b7484592c3b5acc0b8bee, type: 2}
+  - {fileID: 1143255513823812, guid: 89c019faf0bdb7340a613a5f7971368b, type: 2}
+  - {fileID: 1348538641617044, guid: fe6aa1fd4915eda4d8b60ddc9472a727, type: 2}
+  - {fileID: 1740715070847828, guid: ce6a5c19e86f48849be97e9806a883c2, type: 2}
   - {fileID: 1711273951526660, guid: 92aed6b983a0aad4bad99924b369079f, type: 2}
-  - {fileID: 1976039003495888, guid: 8daf94ea821d1424bbff2e5bd52ca396, type: 2}
-  - {fileID: 1779838588451744, guid: c24ddc4f976c21d409625435477e3ea4, type: 2}
+  - {fileID: 1930889568688170, guid: 0a7d15c3f0e3b964fbb01e375870cabb, type: 2}
+  - {fileID: 1169292289021482, guid: a4f07b6bb2c61d44aa5b05b68e9eea10, type: 2}
   - {fileID: 1550849883710360, guid: 1782dfac833dca74ca7253996081ac0f, type: 2}
   - {fileID: 1521170912045790, guid: 23f280be9f9001742a72ff0967037648, type: 2}
   inventoryIcon: {fileID: 0}

@@ -9,18 +9,16 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1779838588451744}
+  m_RootGameObject: {fileID: 1169292289021482}
   m_IsPrefabParent: 1
---- !u!1 &1779838588451744
+--- !u!1 &1169292289021482
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4260555068833362}
-  - component: {fileID: 33926208364422840}
-  - component: {fileID: 23632566724034574}
+  - component: {fileID: 4090908861869380}
   m_Layer: 0
   m_Name: legiz
   m_TagString: Untagged
@@ -28,25 +26,56 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4260555068833362
+--- !u!1 &1316146073955596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4532493220570390}
+  - component: {fileID: 33745436319271570}
+  - component: {fileID: 23928115060522206}
+  m_Layer: 0
+  m_Name: TIBIA_DER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4090908861869380
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1779838588451744}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0, z: -0.000000038146972}
+  m_GameObject: {fileID: 1169292289021482}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 265.79263, y: 192.6204, z: -898.61035}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4532493220570390}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23632566724034574
+--- !u!4 &4532493220570390
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1316146073955596}
+  m_LocalRotation: {x: 0.0022140122, y: -0.98192304, z: -0.089129694, w: 0.16696773}
+  m_LocalPosition: {x: 0.043888543, y: -0.11069589, z: -0.035267472}
+  m_LocalScale: {x: 0.474842, y: 0.47484252, z: 0.47484252}
+  m_Children: []
+  m_Father: {fileID: 4090908861869380}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -10.038, y: -160.52501, z: -1.9850001}
+--- !u!23 &23928115060522206
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1779838588451744}
+  m_GameObject: {fileID: 1316146073955596}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -73,10 +102,10 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33926208364422840
+--- !u!33 &33745436319271570
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1779838588451744}
-  m_Mesh: {fileID: 4300014, guid: 855e02bffcf157a408d78dafc05729a5, type: 3}
+  m_GameObject: {fileID: 1316146073955596}
+  m_Mesh: {fileID: 4300022, guid: 855e02bffcf157a408d78dafc05729a5, type: 3}

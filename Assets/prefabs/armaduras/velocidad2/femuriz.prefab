@@ -9,18 +9,16 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1535044681140938}
+  m_RootGameObject: {fileID: 1143255513823812}
   m_IsPrefabParent: 1
---- !u!1 &1535044681140938
+--- !u!1 &1143255513823812
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4345886774328338}
-  - component: {fileID: 33228799306222252}
-  - component: {fileID: 23286040989901872}
+  - component: {fileID: 4363075581478006}
   m_Layer: 0
   m_Name: femuriz
   m_TagString: Untagged
@@ -28,25 +26,56 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4345886774328338
+--- !u!1 &1580597749650210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4503883634532120}
+  - component: {fileID: 33601259028639966}
+  - component: {fileID: 23021214629671848}
+  m_Layer: 0
+  m_Name: MUSLO_DER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4363075581478006
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1535044681140938}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0, z: -0.000000038146972}
+  m_GameObject: {fileID: 1143255513823812}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 263.7137, y: 194.38795, z: -897.43176}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4503883634532120}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23286040989901872
+--- !u!4 &4503883634532120
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1580597749650210}
+  m_LocalRotation: {x: 0.055259388, y: -0.00000008862963, z: -0.000000042969596, w: 0.99847203}
+  m_LocalPosition: {x: -0.0466, y: -0.2241, z: -0.0293}
+  m_LocalScale: {x: 0.509874, y: 0.50987405, z: 0.50987405}
+  m_Children: []
+  m_Father: {fileID: 4363075581478006}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 6.3350005, y: 0, z: 0}
+--- !u!23 &23021214629671848
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1535044681140938}
+  m_GameObject: {fileID: 1580597749650210}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -73,10 +102,10 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33228799306222252
+--- !u!33 &33601259028639966
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1535044681140938}
-  m_Mesh: {fileID: 4300012, guid: 855e02bffcf157a408d78dafc05729a5, type: 3}
+  m_GameObject: {fileID: 1580597749650210}
+  m_Mesh: {fileID: 4300020, guid: 855e02bffcf157a408d78dafc05729a5, type: 3}
