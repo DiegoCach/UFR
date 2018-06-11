@@ -7476,12 +7476,12 @@ MonoBehaviour:
   typeAtk: 0
   typeVel: 0
   target: {fileID: 4615268113381240}
-  shield: {fileID: 1249634513291332, guid: d02d40476c6060441b1d244dd4a08b29, type: 2}
-  shieldPasive: {fileID: 1071098013531424, guid: b2a7d00ac06423443a0486f9e7c9735b,
-    type: 2}
+  shield: {fileID: 1058647847760030, guid: 66d1d6bcb72f1f3439bffd4d5e0f7d58, type: 2}
   damageArea: {fileID: 1612683102522358, guid: 9b7c891654b76364da7f368315ebf7b6, type: 2}
   spawnR: {fileID: 4909181439976624}
   player: {fileID: 0}
+  explosionPart: {fileID: 1916958333911194, guid: 2edffc0884dedd94c8cac55ca621f94b,
+    type: 2}
   armT: {fileID: 0}
 --- !u!114 &114532542198119402
 MonoBehaviour:

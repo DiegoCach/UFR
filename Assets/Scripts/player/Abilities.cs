@@ -7,8 +7,6 @@ public class Abilities : NetworkBehaviour
 {
     //tipos de robot 
     public bool typeDef = false, typeAtk = false, typeVel = false;
-    private bool abilitiePasive = false;
-    private bool pasiveShield = true;
     private bool shieldCouldown = false;
     private bool DashCouldown = false;
     private bool rechargeCouldown = false;
@@ -16,10 +14,10 @@ public class Abilities : NetworkBehaviour
     private bool invisibleCouldown = false;
     private bool explosionCouldown = false;
     private bool entryInvisible = false;
+    private bool explosionParticle = false;
     private GameObject smoke;
     public Transform target;
     public GameObject shield;
-    public GameObject shieldPasive;
     public GameObject damageArea;
     public Transform spawnR;
     private float timeCoulDown = 5f;
@@ -31,13 +29,10 @@ public class Abilities : NetworkBehaviour
     private float timeF = 6;
     private float timeShield;
     private float timeDash;
-    private float timeJump;
     private float timeinvisible;
-    private float timeRecharge;
     private float timeExplosion;
-    private int PasiveDamageBullet;
     private float dash;
-    public GameObject player;
+    public GameObject player, explosionPart;
     public Transform armT;
     // Use this for initialization
 
@@ -77,13 +72,10 @@ public class Abilities : NetworkBehaviour
                 typeVel = true;
                 break;
         }
-        PasiveDamageBullet = GameManager.init.PasiveDamageBullet;
         dash = GameManager.init.dashImpulse;
         timeShield = GameManager.init.timeShield;
         timeDash = GameManager.init.timeDash;
-        timeJump = GameManager.init.timeJump;
         timeinvisible = GameManager.init.timeinvisible;
-        timeRecharge = GameManager.init.timeRecharge;
         timeExplosion = GameManager.init.timeExplosion;
         player = GameObject.Find("Player1");
     }
@@ -105,31 +97,7 @@ public class Abilities : NetworkBehaviour
             }
         }
         active();
-        pasive();
         CoulDown();
-    }
-
-    private void pasive()
-    {
-        //habilidades pasivas
-        if (typeDef)
-        {
-            CmdabilitiePasiveShildHP();
-        }
-        else if (typeAtk)
-        {
-            /**
-	 		* ultima bala mete mas daño 
-			 **/
-            ultimateBullet();
-        }
-        else if (typeVel)
-        {
-            /**
-	 		* mayor velocidad de disparo
-			 **/
-            SpeedBulletBurst();
-        }
     }
 
     private void active()
@@ -154,6 +122,7 @@ public class Abilities : NetworkBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha2) && typeDef && !explosionCouldown)
         {
             //habilidad daño en area
+            CmdInvokeExplosion();
             GameObject clon = (GameObject)Instantiate(damageArea, gameObject.transform.position, Quaternion.identity, gameObject.transform);
             clon.transform.localScale = new Vector3(10f, 10f, 10f);
             Destroy(clon, 1);
@@ -196,23 +165,6 @@ public class Abilities : NetworkBehaviour
             {
                 entryInvisible = true;
                 Cmdinvisibility();
-            }
-        }
-    }
-
-    private void ultimateBullet()
-    {
-        if (gameObject.GetComponent<Attack>().bullet == 1)
-        {
-            GameManager.init.damageBullet += PasiveDamageBullet;
-            abilitiePasive = true;
-        }
-        else
-        {
-            if (abilitiePasive)
-            {
-                GameManager.init.damageBullet -= PasiveDamageBullet;
-                abilitiePasive = false;
             }
         }
     }
@@ -264,17 +216,7 @@ public class Abilities : NetworkBehaviour
 
             }
         }
-        //
-        if (jumpCouldown)
-        {
-            timeC += Time.deltaTime;
-            if (timeC >= timeJump)
-            {
-                timeC = 0;
-                jumpCouldown = false;
 
-            }
-        }
         //
         if (invisibleCouldown)
         {
@@ -294,16 +236,6 @@ public class Abilities : NetworkBehaviour
             {
                 timeE = 0;
                 explosionCouldown = false;
-            }
-        }
-        //
-        if (rechargeCouldown)
-        {
-            timeF += Time.deltaTime;
-            if (timeF >= timeRecharge)
-            {
-                timeF = 0;
-                rechargeCouldown = false;
             }
         }
     }
@@ -328,17 +260,19 @@ public class Abilities : NetworkBehaviour
     }
 
     [Command]
-    public void CmdabilitiePasiveShildHP()
+    private void CmdInvokeExplosion()
     {
-        if (GameManager.init.player1Hp <= GameManager.init.copyHP1 / 2 && pasiveShield)
-        {
-            Debug.Log("pasiva");
-            pasiveShield = false;
-            GameObject clon = (GameObject)Instantiate(shieldPasive, transform.position, Quaternion.identity, gameObject.transform);
-            clon.transform.localScale = new Vector3(3f, 3f, 3f);
-            NetworkServer.Spawn(clon);
-            Destroy(clon, timeShield);
-        }
+        RpcAbilitieExplosionSpawn();
+    }
+
+    [ClientRpc]
+    public void RpcAbilitieExplosionSpawn()
+    {
+        explosionParticle = false;
+        GameObject clon = (GameObject)Instantiate(explosionPart, transform.position, Quaternion.identity, gameObject.transform);
+        clon.transform.localScale = new Vector3(3f, 3f, 3f);
+        NetworkServer.Spawn(clon);
+        Destroy(clon, timeShield);
     }
 
     [Command]
