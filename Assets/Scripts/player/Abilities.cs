@@ -7,12 +7,12 @@ public class Abilities : NetworkBehaviour
 {
     //tipos de robot 
     public bool typeDef = false, typeAtk = false, typeVel = false;
-    private bool shieldCouldown = false;
-    private bool DashCouldown = false;
-    private bool rechargeCouldown = false;
-    private bool jumpCouldown = false;
-    private bool invisibleCouldown = false;
-    private bool explosionCouldown = false;
+    private bool shieldCooldown = false;
+    private bool DashCooldown = false;
+    private bool powerCooldown = false;
+    private bool ballsCooldown = false;
+    private bool invisibleCooldown = false;
+    private bool explosionCooldown = false;
     private bool entryInvisible = false;
     private bool explosionParticle = false;
     private GameObject smoke;
@@ -20,20 +20,12 @@ public class Abilities : NetworkBehaviour
     public GameObject shield;
     public GameObject damageArea;
     public Transform spawnR;
-    private float timeCoulDown = 5f;
-    private float timeA = 6;
-    private float timeB = 6;
-    private float timeC = 6;
-    private float timeD = 0;
-    private float timeE = 6;
-    private float timeF = 6;
-    private float timeShield;
-    private float timeDash;
-    private float timeinvisible;
-    private float timeExplosion;
+    private float timeCooldown = 25f;
+    private float timeA, timeB, timeC, timeD, timeE, timeF, timeG;
+    private float timeShield, timeDash, timeinvisible, timeExplosion;
     private float dash;
-    public GameObject player, explosionPart;
-    public Transform armT;
+    public GameObject player, explosionPart, auraPart;
+    public Transform armT, ground;
     // Use this for initialization
 
     void Awake()
@@ -84,7 +76,7 @@ public class Abilities : NetworkBehaviour
     void Update()
     {
 
-        if (invisibleCouldown)
+        if (invisibleCooldown)
         {
             if (gameObject.tag == "Player_vel")
             {
@@ -97,7 +89,7 @@ public class Abilities : NetworkBehaviour
             }
         }
         active();
-        CoulDown();
+        Cooldown();
     }
 
     private void active()
@@ -109,19 +101,20 @@ public class Abilities : NetworkBehaviour
 
     private void Def()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) && typeDef && !shieldCouldown)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && typeDef && !shieldCooldown)
         {
-            shieldCouldown = true;
+            shieldCooldown = true;
             //Shield (spawnR);
-            if (gameObject.tag == "Player_def" && shieldCouldown)
+            if (gameObject.tag == "Player_def" && shieldCooldown)
             {
                 CmdShield(spawnR.transform.position);
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2) && typeDef && !explosionCouldown)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && typeDef && !explosionCooldown)
         {
             //habilidad daño en area
+            explosionCooldown = true;
             CmdInvokeExplosion();
             GameObject clon = (GameObject)Instantiate(damageArea, gameObject.transform.position, Quaternion.identity, gameObject.transform);
             clon.transform.localScale = new Vector3(10f, 10f, 10f);
@@ -132,35 +125,36 @@ public class Abilities : NetworkBehaviour
 
     private void Atk()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) && typeAtk && !jumpCouldown)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && typeAtk && !ballsCooldown)
         {
-            //habilidad activa saltar muros
-            jumpCouldown = true;
-            gameObject.GetComponent<MovimientoPersonaje>().moveDirection.y = GameManager.init.jump + GameManager.init.JumpPasiveAbilitie;
-
+            ballsCooldown = true;
+            gameObject.transform.GetChild(12).gameObject.SetActive(true);
+            Invoke("DeactivateBalls", 8);
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2) && typeAtk && !rechargeCouldown)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && typeAtk && !powerCooldown)
         {
-            //habilidad activa recargar cargador
-            rechargeCouldown = true;
-            gameObject.GetComponent<Attack>().bullet = GameManager.init.bullet;
+            powerCooldown = true;
+            gameObject.GetComponent<Attack>().dmg = 3;
+            GameObject clon = (GameObject)Instantiate(auraPart, ground.position, Quaternion.identity, gameObject.transform);
+            Destroy(clon, 6);
+            Invoke("DeactivatePower", 6);
         }
     }
 
     private void Vel()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) && typeVel && !DashCouldown)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && typeVel && !DashCooldown)
         {
             //habilidad activa Dash a donde mira
-            DashCouldown = true;
+            DashCooldown = true;
             Dash();
 
         }
 
-        else if (Input.GetKeyDown(KeyCode.Alpha2) && typeVel && !invisibleCouldown)
+        else if (Input.GetKeyDown(KeyCode.Alpha2) && typeVel && !invisibleCooldown)
         {
-            invisibleCouldown = true;
+            invisibleCooldown = true;
             if (gameObject.tag == "Player_vel")
             {
                 entryInvisible = true;
@@ -193,49 +187,69 @@ public class Abilities : NetworkBehaviour
         }
     }
 
-    public void CoulDown()
+    public void Cooldown()
     {
-        if (shieldCouldown)
+        if (shieldCooldown)
         {
             timeA += Time.deltaTime;
-            if (timeA >= timeCoulDown)
+            if (timeA >= timeCooldown)
             {
                 timeA = 0;
-                shieldCouldown = false;
+                shieldCooldown = false;
 
             }
         }
         //
-        if (DashCouldown)
+        if (DashCooldown)
         {
             timeB += Time.deltaTime;
-            if (timeB >= timeDash)
+            if (timeB >= timeCooldown)
             {
                 timeB = 0;
-                DashCouldown = false;
+                DashCooldown = false;
 
             }
         }
 
         //
-        if (invisibleCouldown)
+        if (invisibleCooldown)
         {
             timeD += Time.deltaTime;
-            if (timeD >= timeinvisible)
+            if (timeD >= timeCooldown)
             {
                 timeD = 0;
-                invisibleCouldown = false;
+                invisibleCooldown = false;
 
             }
         }
         //
-        if (explosionCouldown)
+        if (explosionCooldown)
         {
             timeE += Time.deltaTime;
-            if (timeE >= timeExplosion)
+            if (timeE >= timeCooldown)
             {
                 timeE = 0;
-                explosionCouldown = false;
+                explosionCooldown = false;
+            }
+        }
+
+        if (ballsCooldown)
+        {
+            timeF += Time.deltaTime;
+            if (timeF >= timeCooldown)
+            {
+                timeF = 0;
+                ballsCooldown = false;
+            }
+        }
+
+        if (powerCooldown)
+        {
+            timeG += Time.deltaTime;
+            if (timeG >= timeCooldown)
+            {
+                timeG = 0;
+                powerCooldown = false;
             }
         }
     }
@@ -328,4 +342,13 @@ public class Abilities : NetworkBehaviour
         Invoke("normal", timeinvisible);
     }
 
+    private void DeactivateBalls()
+    {
+        gameObject.transform.GetChild(12).gameObject.SetActive(false);
+    }
+
+    private void DeactivatePower()
+    {
+        gameObject.GetComponent<Attack>().dmg = 1;
+    }
 }

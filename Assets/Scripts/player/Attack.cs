@@ -21,6 +21,7 @@ public class Attack : NetworkBehaviour
 	public int timeRechange;
 	public float atackPistol=0;
 	public float atackSword = 0;
+    public float dmg = 1;
     public Transform arm;
     public Camera myCamera;
     private BoxCollider meleeCol; 
@@ -195,7 +196,7 @@ public class Attack : NetworkBehaviour
         Debug.Log(UIdentity);
         if (hasAuthority && UIdentity == "Player2")
         {
-            GameManager.init.player2Hp--;
+            GameManager.init.player2Hp -= dmg;
             
         }
         if (!hasAuthority && UIdentity == "Player2")
@@ -230,7 +231,7 @@ public class Attack : NetworkBehaviour
     [ClientRpc]
     public void RpcTakeDamage()
     {
-        GameManager.init.player1Hp--;
+        GameManager.init.player1Hp -= dmg;
     }
 
     [Command]

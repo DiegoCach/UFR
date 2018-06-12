@@ -19,13 +19,16 @@ public class meleeDmg : NetworkBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         var script = other.gameObject.GetComponent<EffectsRobots>();
+        var script2 = gameObject.GetComponent<Attack>();
+        float dmg = script2.dmg;
+
         if ( int.Parse(other.GetComponent<NetworkIdentity>().netId.ToString()) == 11)
         {
-            GameManager.init.player1Hp--;
+            GameManager.init.player1Hp -= dmg;
             StartCoroutine(TakeDmg(other.GetComponent<Animator>(), other.gameObject));
         } else if (int.Parse(other.GetComponent<NetworkIdentity>().netId.ToString()) == 12)
         {
-            GameManager.init.player2Hp--;
+            GameManager.init.player2Hp -= dmg;
             StartCoroutine(TakeDmg(other.GetComponent<Animator>(), other.gameObject));
         }
 
