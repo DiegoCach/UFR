@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class meleeDmg : NetworkBehaviour {
 
-
+    public float dmg;
 
     void Start () {
 		
@@ -19,14 +19,14 @@ public class meleeDmg : NetworkBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         var script = other.gameObject.GetComponent<EffectsRobots>();
-        var script2 = gameObject.GetComponent<Attack>();
-        float dmg = script2.dmg;
+        var script2 = transform.parent.gameObject.GetComponent<Attack>();
+        dmg = script2.dmg;
 
-        if ( int.Parse(other.GetComponent<NetworkIdentity>().netId.ToString()) == 11)
+        if ( int.Parse(other.GetComponent<NetworkIdentity>().netId.ToString()) == 15)
         {
             GameManager.init.player1Hp -= dmg;
             StartCoroutine(TakeDmg(other.GetComponent<Animator>(), other.gameObject));
-        } else if (int.Parse(other.GetComponent<NetworkIdentity>().netId.ToString()) == 12)
+        } else if (int.Parse(other.GetComponent<NetworkIdentity>().netId.ToString()) == 16)
         {
             GameManager.init.player2Hp -= dmg;
             StartCoroutine(TakeDmg(other.GetComponent<Animator>(), other.gameObject));

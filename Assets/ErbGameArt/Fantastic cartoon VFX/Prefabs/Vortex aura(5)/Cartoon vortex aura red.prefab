@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4176018242958834}
   - component: {fileID: 198523908924967572}
   - component: {fileID: 199254515394180158}
+  - component: {fileID: 114496032954934022}
+  - component: {fileID: 114935765065762704}
   m_Layer: 0
   m_Name: Cartoon vortex aura red
   m_TagString: Untagged
@@ -72,6 +74,59 @@ Transform:
   m_Father: {fileID: 4176018242958834}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114496032954934022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1158365593749858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 213
+    i1: 85
+    i2: 232
+    i3: 217
+    i4: 189
+    i5: 56
+    i6: 171
+    i7: 228
+    i8: 201
+    i9: 178
+    i10: 95
+    i11: 72
+    i12: 84
+    i13: 191
+    i14: 238
+    i15: 229
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
+--- !u!114 &114935765065762704
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1158365593749858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 1
+  m_SendInterval: 0.2
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!198 &198523908924967572
 ParticleSystem:
   m_ObjectHideFlags: 1

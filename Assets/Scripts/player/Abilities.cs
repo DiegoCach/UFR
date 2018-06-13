@@ -127,18 +127,12 @@ public class Abilities : NetworkBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1) && typeAtk && !ballsCooldown)
         {
-            ballsCooldown = true;
-            gameObject.transform.GetChild(12).gameObject.SetActive(true);
-            Invoke("DeactivateBalls", 8);
+            CmdBalls();
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2) && typeAtk && !powerCooldown)
         {
-            powerCooldown = true;
-            gameObject.GetComponent<Attack>().dmg = 3;
-            GameObject clon = (GameObject)Instantiate(auraPart, ground.position, Quaternion.identity, gameObject.transform);
-            Destroy(clon, 6);
-            Invoke("DeactivatePower", 6);
+            CmdAura();
         }
     }
 
@@ -260,62 +254,6 @@ public class Abilities : NetworkBehaviour
         GameManager.init.speed = GameManager.init.speedNormal;
     }
 
-
-    [Command]
-    public void CmdShield(Vector3 arm)
-    {
-        armT = this.transform.Find("SpawnR").transform;
-        armT.position = arm;
-        GameObject clon = (GameObject)Instantiate(shield, armT.position, Quaternion.identity, armT);
-        clon.transform.LookAt(target);
-        Destroy(clon, timeShield);
-        timeA += Time.deltaTime;
-        NetworkServer.Spawn(clon);
-    }
-
-    [Command]
-    private void CmdInvokeExplosion()
-    {
-        RpcAbilitieExplosionSpawn();
-    }
-
-    [ClientRpc]
-    public void RpcAbilitieExplosionSpawn()
-    {
-        explosionParticle = false;
-        GameObject clon = (GameObject)Instantiate(explosionPart, transform.position, Quaternion.identity, gameObject.transform);
-        clon.transform.localScale = new Vector3(3f, 3f, 3f);
-        NetworkServer.Spawn(clon);
-        Destroy(clon, timeShield);
-    }
-
-    [Command]
-    public void Cmdinvisibility()
-    {
-        Debug.Log("invisibilidad");
-        Color color = GetComponent<Renderer>().material.color;
-        Component[] z = gameObject.GetComponentsInChildren(typeof(Transform));
-        foreach (Component b in z)
-        {
-            if (b.gameObject.GetComponent<MeshRenderer>() == null)
-            {
-                b.gameObject.AddComponent<MeshRenderer>();
-            }
-        }
-        Renderer[] a = gameObject.GetComponentsInChildren<Renderer>();
-        for (var y = 0; y < a.Length; y++)
-        {
-
-            for (var j = 0; j < a[y].materials.Length; j++)
-            {
-                a[y].materials[j].shader = Resources.Load("invisible") as Shader;
-                //Resources.Load("invisible");
-            }
-
-        }
-        Invoke("normal", timeinvisible);
-    }
-
     public void invisy()
     {
         Color color = GetComponent<Renderer>().material.color;
@@ -350,5 +288,98 @@ public class Abilities : NetworkBehaviour
     private void DeactivatePower()
     {
         gameObject.GetComponent<Attack>().dmg = 1;
+    }
+
+    [Command]
+    public void CmdShield(Vector3 arm)
+    {
+        RpcAbilitieShieldSpawn(arm);
+    }
+
+    [Command]
+    private void CmdInvokeExplosion()
+    {
+        RpcAbilitieExplosionSpawn();
+    }
+
+    [Command]
+    private void CmdBalls()
+    {
+        RpcAbilitieBallsSpawn();
+    }
+
+    [Command]
+    private void CmdAura()
+    {
+        RpcAbilitieAuraSpawn();
+    }
+
+    [Command]
+    public void Cmdinvisibility()
+    {
+        Debug.Log("invisibilidad");
+        Color color = GetComponent<Renderer>().material.color;
+        Component[] z = gameObject.GetComponentsInChildren(typeof(Transform));
+        foreach (Component b in z)
+        {
+            if (b.gameObject.GetComponent<MeshRenderer>() == null)
+            {
+                b.gameObject.AddComponent<MeshRenderer>();
+            }
+        }
+        Renderer[] a = gameObject.GetComponentsInChildren<Renderer>();
+        for (var y = 0; y < a.Length; y++)
+        {
+
+            for (var j = 0; j < a[y].materials.Length; j++)
+            {
+                a[y].materials[j].shader = Resources.Load("invisible") as Shader;
+                //Resources.Load("invisible");
+            }
+
+        }
+        Invoke("normal", timeinvisible);
+    }
+
+    [ClientRpc]
+    public void RpcAbilitieExplosionSpawn()
+    {
+        explosionParticle = false;
+        GameObject clon = (GameObject)Instantiate(explosionPart, transform.position, Quaternion.identity, gameObject.transform);
+        clon.transform.localScale = new Vector3(3f, 3f, 3f);
+        NetworkServer.Spawn(clon);
+        Destroy(clon, timeShield);
+    }
+
+    [ClientRpc]
+    public void RpcAbilitieShieldSpawn(Vector3 arm)
+    {
+        shieldCooldown = false;
+        armT = this.transform.Find("SpawnR").transform;
+        armT.position = arm;
+        GameObject clon = (GameObject)Instantiate(shield, armT.position, Quaternion.identity, armT);
+        clon.transform.LookAt(target);
+        NetworkServer.Spawn(clon);
+        Destroy(clon, timeShield);
+        timeA += Time.deltaTime;
+    }
+
+    [ClientRpc]
+    public void RpcAbilitieBallsSpawn()
+    {
+        ballsCooldown = true;
+        gameObject.transform.GetChild(12).gameObject.SetActive(true);
+        Invoke("DeactivateBalls", 8);
+    }
+
+    [ClientRpc]
+    public void RpcAbilitieAuraSpawn()
+    {
+        powerCooldown = true;
+        gameObject.GetComponent<Attack>().dmg = 3;
+        GameObject clon = (GameObject)Instantiate(auraPart, ground.position, Quaternion.identity, gameObject.transform);
+        NetworkServer.Spawn(clon);
+        Destroy(clon, 6);
+        Invoke("DeactivatePower", 6);
     }
 }

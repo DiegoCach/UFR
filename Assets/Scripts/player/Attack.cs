@@ -174,15 +174,17 @@ public class Attack : NetworkBehaviour
             else
             {
                 Vector3 elforward = myCamera.transform.forward * 100;
-                Vector3 eldist = this.transform.position - myCamera.transform.position;
-                float distSeguridad = Vector3.Dot(elforward.normalized, eldist.normalized)*eldist.magnitude;
-                Debug.DrawRay(myCamera.transform.position + myCamera.transform.forward* distSeguridad, myCamera.transform.forward*100, Color.red, 2);
+                Vector3 eldist = (this.transform.position + Vector3.up) - myCamera.transform.position;
+                float distSeguridad = Vector3.Dot(elforward.normalized, eldist.normalized) * (eldist.magnitude + 0.3f);
+                Debug.DrawRay(myCamera.transform.position + myCamera.transform.forward * (distSeguridad), myCamera.transform.forward * 100, Color.red, 2);
 
                 RaycastHit hit;
-                if (Physics.Raycast(myCamera.transform.position+myCamera.transform.forward*distSeguridad, myCamera.transform.forward, out hit, 100))
+                if (Physics.Raycast(myCamera.transform.position + myCamera.transform.forward * (distSeguridad), myCamera.transform.forward, out hit, 100))
                 {
                     string UIdentity = hit.collider.gameObject.name;
-                    CmdWhoWasShot(UIdentity, 1);
+                    CmdWhoWasShot(UIdentity, 1, hit.collider.tag, hit.collider.gameObject);
+                    Debug.Log(hit.collider.tag);
+                    
                 }
             }
         }
@@ -191,7 +193,7 @@ public class Attack : NetworkBehaviour
 
 
     [Command]
-    void CmdWhoWasShot(string UIdentity, float dmg)
+    void CmdWhoWasShot(string UIdentity, float dmg, string hit, GameObject gm)
     {
         Debug.Log(UIdentity);
         if (hasAuthority && UIdentity == "Player2")
@@ -210,6 +212,14 @@ public class Attack : NetworkBehaviour
             {
                 lifeContainer.gameObject.AddComponent<Rigidbody>();
             }
+        }
+        if (hit == "Bombilla")
+        {
+            gm.GetComponent<TrampaBombilla>().activado = true;
+        }
+        if (hit == "agua")
+        {
+            gm.GetComponent<TrampaBombilla>().activadoS = true;
         }
     }
 
