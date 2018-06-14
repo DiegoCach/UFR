@@ -10,10 +10,7 @@ public class MovimientoPersonaje : NetworkBehaviour
 	public float run = 0;
     public float jump = 0;
 	public float gravity = 20f;
-	private float moveX;
-	private float moveZ;
-	private float moveS=0;
-	private float moveR;
+	public float moveX, moveZ, moveS, moveR;
     private bool part = false;
     public bool isJumping = false;
     public GameObject referenceFloor;

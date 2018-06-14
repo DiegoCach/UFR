@@ -19,7 +19,7 @@ public class Attack : NetworkBehaviour
     private ParticleSystem clone;
 	public int bullet;
 	public int timeRechange;
-	public float atackPistol=0;
+	public float atackPistol = 0;
 	public float atackSword = 0;
     public float dmg = 1;
     public Transform arm;
@@ -34,6 +34,7 @@ public class Attack : NetworkBehaviour
     int noOfClicks; 
     bool canClick;
 
+    MovimientoPersonaje mov;
     //variablesSync
     [SyncVar]
     public float forceAtack;
@@ -44,6 +45,7 @@ public class Attack : NetworkBehaviour
 	{
         meleeCol = gameObject.transform.GetChild(11).GetComponent<BoxCollider>();
 		bullet = GameManager.init.bullet;
+        mov = GetComponent<MovimientoPersonaje>();
 		anim = GetComponent<Animator>();
         character = GetComponent<CharacterController>();
         lifeContainer = GameObject.Find("vida").GetComponent<LifeContainer>();
@@ -59,18 +61,6 @@ public class Attack : NetworkBehaviour
 			return;
 		}
 
-        if (Input.GetKeyDown(KeyCode.Mouse1)&&BvsBRigth) 																
-		{
-			//animation
-			atackSword += 1;
-			Debug.Log("golpe");
-			anim.SetFloat ("atackSword", atackSword);
-            clone = Instantiate(slash, slashPos);
-            Destroy(clone, 0.5f);
-			Invoke ("volveranim2",1.2f);
-
-		}
-
         if( character.isGrounded) {
             if (Input.GetKeyDown(KeyCode.Mouse0) && BvsBLeft)
             {
@@ -78,20 +68,12 @@ public class Attack : NetworkBehaviour
             }
         }
 
-        if (Input.GetButtonDown("Fire1") && shooterI && rechargePass == false)
-        {
-            CmdarmAssignI();
-            Debug.Log("soy Cliente" + this.isClient);
-            Debug.Log("soy Servidor" + this.isServer);
-            CmdShooter();
-            Debug.Log("disparo");
-            //animation
-        }
-
         if (Input.GetButtonDown("Fire2")&& shooterR && rechargePass==false) 																
 		{
             CmdarmAssignR();
             CmdShooter();
+            anim.SetBool("BlendShoot", true);
+            Invoke("VolverAnim", 0.5f);
             atackPistol += 1;
             //animation
         }
@@ -162,6 +144,10 @@ public class Attack : NetworkBehaviour
         CmdDeactivateCol();
     }
 
+    private void VolverAnim()
+    {
+        anim.SetBool("BlendShoot", false);
+    }
 
     void CmdShooter()
     {
