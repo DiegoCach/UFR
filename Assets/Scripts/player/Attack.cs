@@ -72,8 +72,21 @@ public class Attack : NetworkBehaviour
 		{
             CmdarmAssignR();
             CmdShooter();
-            anim.SetBool("BlendShoot", true);
-            Invoke("VolverAnim", 0.5f);
+            if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.LeftShift))
+            {
+                anim.SetBool("BlendShootWalking", true);
+                Invoke("VolverAnim", 0.5f);
+            }
+            if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
+            {
+                anim.SetBool("BlendShootRunning", true);
+                Invoke("VolverAnim", 0.5f);
+            }
+            else {
+                anim.SetBool("BlendShoot", true);
+                Invoke("VolverAnim", 0.5f);
+            }
+            
             atackPistol += 1;
             //animation
         }
@@ -147,6 +160,8 @@ public class Attack : NetworkBehaviour
     private void VolverAnim()
     {
         anim.SetBool("BlendShoot", false);
+        anim.SetBool("BlendShootWalking", false);
+        anim.SetBool("BlendShootRunning", false);
     }
 
     void CmdShooter()
