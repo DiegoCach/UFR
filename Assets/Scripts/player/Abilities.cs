@@ -26,6 +26,7 @@ public class Abilities : NetworkBehaviour
     private float dash;
     public GameObject player, explosionPart, auraPart;
     public Transform armT, ground;
+    Animator anim;
     // Use this for initialization
 
     void Awake()
@@ -65,6 +66,7 @@ public class Abilities : NetworkBehaviour
                 break;
         }
         dash = GameManager.init.dashImpulse;
+        anim = GetComponent<Animator>();
         timeShield = GameManager.init.timeShield;
         timeDash = GameManager.init.timeDash;
         timeinvisible = GameManager.init.timeinvisible;
@@ -143,7 +145,7 @@ public class Abilities : NetworkBehaviour
             //habilidad activa Dash a donde mira
             DashCooldown = true;
             Dash();
-
+            anim.SetTrigger("BlendStop");
         }
 
         else if (Input.GetKeyDown(KeyCode.Alpha2) && typeVel && !invisibleCooldown)

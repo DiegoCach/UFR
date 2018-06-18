@@ -72,7 +72,7 @@ public class Attack : NetworkBehaviour
 		{
             CmdarmAssignR();
             CmdShooter();
-            if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.LeftShift))
+            if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S)) && !Input.GetKey(KeyCode.LeftShift))
             {
                 anim.SetBool("BlendShootWalking", true);
                 Invoke("VolverAnim", 0.5f);
