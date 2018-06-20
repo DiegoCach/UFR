@@ -125,7 +125,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1119736529616288}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.3160384, y: -0.099999905, z: -3.322771}
+  m_LocalPosition: {x: 3.3292084, y: -0.1, z: 9.60907}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4510043846541706}
@@ -161,7 +161,7 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 0
+  m_HDR: 1
   m_AllowMSAA: 1
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -197,7 +197,7 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 0
+  m_HDR: 1
   m_AllowMSAA: 1
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -237,18 +237,19 @@ MonoBehaviour:
   autoTargetPlayer: 0
   wallLayers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 4294967295
   shoulder: 0
   cameraSettings:
     camPositionOffsetLeft: {x: -0.213, y: 0.82, z: -2.33}
     camPositionOffsetRight: {x: 0.213, y: 0.82, z: -2.33}
-    UICamera: {fileID: 20443530216130578}
+    UICamera: {fileID: 20254734155495734, guid: 97679553100fbaf48892b2c500d3ddb6,
+      type: 2}
     mouseXSensitivity: 5
     mouseYSensitivity: 5
     minAngle: -70
     maxAngle: 70
     rotationSpeed: 5
-    maxCheckDist: 0.1
+    maxCheckDist: 0.2
     fieldOfView: 70
     zoomFieldOfView: 30
     zoomSpeed: 3

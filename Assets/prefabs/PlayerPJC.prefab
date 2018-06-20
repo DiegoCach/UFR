@@ -1166,6 +1166,7 @@ GameObject:
   - component: {fileID: 136249078987951936}
   - component: {fileID: 114156635128660458}
   - component: {fileID: 23680909314896998}
+  - component: {fileID: 81751878978692930}
   m_Layer: 8
   m_Name: PlayerPJC
   m_TagString: Player
@@ -8594,6 +8595,13 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!81 &81751878978692930
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1307024075421618}
+  m_Enabled: 1
 --- !u!95 &95092027062211374
 Animator:
   serializedVersion: 3
@@ -8940,6 +8948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef9cbfd25b2c5b4dad8cce3d1a7182c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmg: 0
 --- !u!114 &114598333531578664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8987,6 +8996,10 @@ MonoBehaviour:
   run: 3
   jump: 30
   gravity: 20
+  moveX: 0
+  moveZ: 0
+  moveS: 0
+  moveR: 0
   isJumping: 0
   referenceFloor: {fileID: 1426530754143158}
   playerRb: {fileID: 54283738438742542}

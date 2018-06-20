@@ -13,6 +13,8 @@ TagManager:
   - Player_def
   - Player_atak
   - Patron
+  - agua
+  - Bombilla
   layers:
   - Default
   - TransparentFX
