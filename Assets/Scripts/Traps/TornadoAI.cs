@@ -64,12 +64,12 @@ public class TornadoAI : NetworkBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (int.Parse(other.GetComponent<NetworkIdentity>().netId.ToString()) == 10)
+        if (int.Parse(other.GetComponent<NetworkIdentity>().netId.ToString()) == 17)
         {
             other.transform.parent = gameObject.transform;
             deactivate(other.gameObject);
         }
-        else if (int.Parse(other.GetComponent<NetworkIdentity>().netId.ToString()) == 11)
+        else if (int.Parse(other.GetComponent<NetworkIdentity>().netId.ToString()) == 18)
         {
             other.transform.parent = gameObject.transform;
             deactivate(other.gameObject);

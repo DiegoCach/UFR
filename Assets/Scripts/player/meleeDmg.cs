@@ -22,11 +22,11 @@ public class meleeDmg : NetworkBehaviour {
         var script2 = transform.parent.gameObject.GetComponent<Attack>();
         dmg = script2.dmg;
 
-        if ( int.Parse(other.GetComponent<NetworkIdentity>().netId.ToString()) == 15)
+        if ( int.Parse(other.GetComponent<NetworkIdentity>().netId.ToString()) == 17)
         {
             GameManager.init.player1Hp -= dmg;
             StartCoroutine(TakeDmg(other.GetComponent<Animator>(), other.gameObject));
-        } else if (int.Parse(other.GetComponent<NetworkIdentity>().netId.ToString()) == 16)
+        } else if (int.Parse(other.GetComponent<NetworkIdentity>().netId.ToString()) == 18)
         {
             GameManager.init.player2Hp -= dmg;
             StartCoroutine(TakeDmg(other.GetComponent<Animator>(), other.gameObject));

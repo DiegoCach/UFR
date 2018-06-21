@@ -934,9 +934,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Salir
-
-'
+  m_Text: Volver
 --- !u!222 &950566868
 CanvasRenderer:
   m_ObjectHideFlags: 0

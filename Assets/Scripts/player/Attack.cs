@@ -12,22 +12,18 @@ public class Attack : NetworkBehaviour
 	private bool rechargePass = false;
     CharacterController character;
     public GameObject prefab;
-	public Transform spawnI;
-	public Transform spawnR;
-    public Transform slashPos;
-    public ParticleSystem slash;
+	public Transform spawnI, spawnR, slashPos, arm;
+    public ParticleSystem slash, shoot;
     private ParticleSystem clone;
 	public int bullet;
-	public int timeRechange;
 	public float atackPistol = 0;
 	public float atackSword = 0;
     public float dmg = 1;
-    public Transform arm;
     public Camera myCamera;
     private BoxCollider meleeCol; 
 
     private LifeContainer lifeContainer;
-    public bool isAttaking = false;
+    public bool isAttaking = false, isShooting = false;
 	Animator anim;
     private float temps = 0;
     private bool firstCom = false;
@@ -68,10 +64,12 @@ public class Attack : NetworkBehaviour
             }
         }
 
-        if (Input.GetButtonDown("Fire2")&& shooterR && rechargePass==false) 																
+        if (Input.GetButtonDown("Fire2")&& shooterR && isShooting == false) 																
 		{
+            isShooting = true;
             CmdarmAssignR();
             CmdShooter();
+            CmdActivatePartShoot();
             if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S)) && !Input.GetKey(KeyCode.LeftShift))
             {
                 anim.SetBool("BlendShootWalking", true);
@@ -259,6 +257,12 @@ public class Attack : NetworkBehaviour
         RpcDeactivateCol();
     }
 
+    [Command]
+    public void CmdActivatePartShoot()
+    {
+        RpcActivatePartShoot();
+    }
+
     [ClientRpc]
     public void RpcActivateCol()
     {
@@ -269,5 +273,19 @@ public class Attack : NetworkBehaviour
     public void RpcDeactivateCol()
     {
         meleeCol.enabled = false;
+    }
+
+    [ClientRpc]
+    private void RpcActivatePartShoot()
+    {
+        shoot.Play();
+        StartCoroutine("waitToStop");
+    }
+
+    IEnumerator waitToStop()
+    {
+        yield return new WaitForSeconds(0.5f);
+        shoot.Stop();
+        isShooting = false;
     }
 }
