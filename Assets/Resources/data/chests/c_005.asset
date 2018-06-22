@@ -23,4 +23,4 @@ MonoBehaviour:
   - {fileID: 1589503927762096, guid: b81c0bf6d96a2ab46a82d1d3957044d2, type: 2}
   - {fileID: 1937408416301202, guid: 5c323c797035cc44c870c73ebc3e77bf, type: 2}
   - {fileID: 1730994097593002, guid: d7b729c367641574aacef29badd837fc, type: 2}
-  inventoryIcon: {fileID: 0}
+  inventoryIcon: {fileID: 21300000, guid: e7e8f8c167da26c469af4d713afacc33, type: 3}

@@ -30,4 +30,4 @@ MonoBehaviour:
   - {fileID: 1169292289021482, guid: a4f07b6bb2c61d44aa5b05b68e9eea10, type: 2}
   - {fileID: 1550849883710360, guid: 1782dfac833dca74ca7253996081ac0f, type: 2}
   - {fileID: 1521170912045790, guid: 23f280be9f9001742a72ff0967037648, type: 2}
-  inventoryIcon: {fileID: 0}
+  inventoryIcon: {fileID: 21300000, guid: 9de6bacb4f478194d9140685cfc59039, type: 3}

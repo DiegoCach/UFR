@@ -39,7 +39,7 @@ public class Attack : NetworkBehaviour
     // Use this for initialization
     void Start () 
 	{
-        meleeCol = gameObject.transform.GetChild(11).GetComponent<BoxCollider>();
+        meleeCol = gameObject.transform.GetChild(9).GetComponent<BoxCollider>();
 		bullet = GameManager.init.bullet;
         mov = GetComponent<MovimientoPersonaje>();
 		anim = GetComponent<Animator>();

@@ -20,4 +20,4 @@ MonoBehaviour:
   description: alguna tiene que tener
   skins:
   - {fileID: 1596343913829968, guid: 8e291ec177732fd41b6f64a0ef571473, type: 2}
-  inventoryIcon: {fileID: 21300000, guid: 31f9a21a7d9964d4fab21379ace7cca4, type: 3}
+  inventoryIcon: {fileID: 21300000, guid: 426db221678ea964ca2d1446cbfa7610, type: 3}
